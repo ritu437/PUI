@@ -25,3 +25,20 @@ function completeListItem(item) {
         // in css, this would be: "text-decoration: none"
     }
 }
+
+function deleteList(){
+    //remove ol element(item)
+     var list = document.getElementById("grocery-list");
+     list.remove();
+}
+
+function addDueDate(item) {
+    //read in due date
+    var dueDate = document.getElementById("due-date");
+    //get list item value
+    var listItem = document.getElementById("list-item")
+    //create new list value
+    var listItemWithDueDate = listItem + dueDate;
+    //add due date to list item
+
+}

@@ -24,15 +24,15 @@
             <div class="list">
                 <h2 class="list-title">Groceries</h2>
                 <ol id ="grocery-list">
-                    <li><input type = "checkbox" class = complete-item" onclick ="completeListItem(this)"> Eggs  <button class= "delete-item" onclick ="deleteListItem(this.parentNode)"> X </button></li>
+                    <li id = "list-item"><input type = "checkbox" class = complete-item" onclick ="completeListItem(this)"> Eggs <input id = "due-date" type ="text"> <button onclick = "addDueDate(this)"> Add Due Date </button> <button class= "delete-item" onclick ="deleteListItem(this.parentNode)"> Delete Item </button></li>
 
-                    <li><input type = "checkbox" class = complete-item" onclick ="completeListItem(this)">Milk  <button class= "delete-item" onclick ="deleteListItem(this.parentNode)"> X </button></li>
+                    <li id = "list-item"><input type = "checkbox" class = complete-item" onclick ="completeListItem(this)"> Milk  <input id = "due-date" type ="text"> <button onclick = "addDueDate()"> Add Due Date </button> <button class= "delete-item" onclick ="deleteListItem(this.parentNode)"> Delete Item </button></li>
 
-                    <li><input type = "checkbox" class = complete-item" onclick ="completeListItem(this)">Cereal <button class= "delete-item" onclick ="deleteListItem(this.parentNode)"> X </button></li>
+                    <li id = "list-item"><input type = "checkbox" class = complete-item" onclick ="completeListItem(this)"> Cereal <input id = "due-date" type ="text"> <button onclick = "addDueDate()"> Add Due Date </button> <button class= "delete-item" onclick ="deleteListItem(this.parentNode)"> Delete Item </button></li>
 
                 </ol>
-
             </div>
+            <button class = "delete-item" onclick ="deleteList()"> Delete List </button>
             <input id = "new-list-item" type="text"></input>
             <button onclick="addListItem()">Add Item</button>
         </div>
