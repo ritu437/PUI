@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+    background-color: purple;
+    color: black;
+    font-family: 'Homemade Apple', cursive;
+    font-size: 144;
+}
+
+h2{
+    text-align: center;
+    background-color: purple;
+    color: black;
+    font-family: 'Italiana', serif;
+    font-size: 72;
+}
+
+#featured-item{
+    margin: 0 auto;
+    width: 80%;
+    background-color: pink;
+    color: black;
+    font-family: 'Italiana', serif;
+    font-size: 45;
+}
+
+#product-tab{
+    text-align: right
+    background-color: purple;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 144;
+}
+
+#bun-name{
+    background-color: brown;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 96;
+}
+
+#footer{
+    text-align: right;
+    background-color: purple;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25;
+}
