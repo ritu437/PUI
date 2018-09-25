@@ -1,0 +1,21 @@
+#product-tab{
+    text-align: left;
+    background-color: purple;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 144;
+}
+#bun-name{
+    background-color: brown;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 96;
+}
+
+#footer{
+    text-align: right;
+    background-color: purple;
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    font-size: 25;
+}
