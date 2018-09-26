@@ -1,7 +1,30 @@
 /* Format Page Background */
     /* Format Background Image */
+    html{
+        background: url("Images/background image.jpg") no-repeat center center fixed;
+        background-color: grey;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 
     /* Format Navigation Bar */
+    .nav-icon-size{
+        width = "50"
+        height = "50"
+    }
+    .left{
+        float: left;
+        width: 50px;
+        padding: 10px;
+
+    }
+    .right{
+        float: right;
+        width: 50px;
+        padding: 10px;
+    }
         /* Format Menu Icon */
         /* Format Other Icons */
 
