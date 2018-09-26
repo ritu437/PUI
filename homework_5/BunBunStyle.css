@@ -37,7 +37,6 @@
         font-size: 25;
     }
 
-
 /* Format Page Text */
     /* Format Shop Name Text */
     #bunbun{
@@ -54,82 +53,54 @@
         font-family: 'Italiana', serif;
         font-size: 72;
     }
-    /* Format Product Tab Text */
-    .product-tab{
-        color: black;
-        font-family: 'Indie Flower', cursive;
-        font-size: 48;
-    }
-    /* Format Featured Item Text */
-    .featured-items{
-        color: black;
-        font-family: 'Italiana', serif;
-        font-size: 45;
-    }
-    /* Format Product Names Text */
-    .product-names{
+    h2{
         background-color: brown;
         color: white;
         font-family: 'Indie Flower', cursive;
         font-size: 96;
     }
-    .button-categories{
-        color: black;
-        font-family: 'Indie Flower', cursive;
-        font-size: 110;
-    }
-    /* Format Large Buttons Text */
-    .large-buttons{
-        color: black;
+    h3{
+        color: blue;
         font-family: 'Indie Flower', cursive;
         font-size: 48;
     }
-    /* Format Small Buttons Text */
-    .small-buttons{
+    h4{
         color: black;
-        font-family: 'Indie Flower', cursive;
-        font-size: 36;
+        font-family: 'Italiana', serif;
+        font-size: 45;
     }
-    /* Format Product Name on Details Page */
-    #product-title{
-        color: black;
-        font-family: 'Indie Flower', cursive;
-        font-size: 48;
-    }
-    /* Format Product Details Title */
-    #product-details{
+    h5{
         color: black;
         font-family: 'Italiana', serif;
         font-size: 24;
     }
-    /* Format Nutrition Title
-    #health-info{
+    h6{
         color: black;
         font-family: 'Italiana', serif;
-        font-size: 14;
-    }*/
-    /* Format Body Text */
+        font-size: 20;
+    }
     p{
         color: black;
         font-family: 'Italiana', serif;
         font-size: 14;
     }
-    /* Format Subtotal Text */
-    #subtotal{
+        /* Format Large Buttons Text */
+    button{
         color: black;
         font-family: 'Indie Flower', cursive;
+    }
+    .large-buttons{
         font-size: 48;
     }
-    /* Format Cost Text */
-    #cost{
-        color: black;
-        font-family: 'Italiana', serif;
-        font-size: 40;
+    /* Format Small Buttons Text */
+    .small-buttons{
+        font-size: 36;
     }
 
-
-
-
+    .featured-images{
+        width = "589"
+        height = "641"
+    }
 
 
 
