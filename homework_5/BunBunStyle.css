@@ -1,47 +1,113 @@
-h1{
-    text-align: center;
-    background-color: purple;
-    color: black;
-    font-family: 'Homemade Apple', cursive;
-    font-size: 144;
-}
+/* Format Page Background */
+    /* Format Background Image */
 
-h2{
-    text-align: center;
-    background-color: purple;
-    color: black;
-    font-family: 'Italiana', serif;
-    font-size: 72;
-}
+    /* Format Navigation Bar */
+        /* Format Menu Icon */
+        /* Format Other Icons */
 
-#featured-item{
-    margin: 0 auto;
-    width: 80%;
-    background-color: pink;
-    color: black;
-    font-family: 'Italiana', serif;
-    font-size: 45;
-}
+    /* Format Contact Us Footer */
+    .footer{
+        text-align: right;
+        background-color: purple;
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 25;
+    }
 
-#product-tab{
-    text-align: right
-    background-color: purple;
-    color: black;
-    font-family: 'Indie Flower', cursive;
-    font-size: 144;
-}
 
-#bun-name{
-    background-color: brown;
-    color: white;
-    font-family: 'Indie Flower', cursive;
-    font-size: 96;
-}
+/* Format Page Text */
+    /* Format Shop Name Text */
+    #bunbun{
+        text-align: center;
+        background-color: purple;
+        color: black;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 144;
+    }
+    #bake-shop{
+        text-align: center;
+        background-color: purple;
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 72;
+    }
+    /* Format Product Tab Text */
+    .product-tab{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 48;
+    }
+    /* Format Featured Item Text */
+    .featured-items{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 45;
+    }
+    /* Format Product Names Text */
+    .product-names{
+        background-color: brown;
+        color: white;
+        font-family: 'Indie Flower', cursive;
+        font-size: 96;
+    }
+    .button-categories{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 110;
+    }
+    /* Format Large Buttons Text */
+    .large-buttons{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 48;
+    }
+    /* Format Small Buttons Text */
+    .small-buttons{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 36;
+    }
+    /* Format Product Name on Details Page */
+    #product-title{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 48;
+    }
+    /* Format Product Details Title */
+    #product-details{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 24;
+    }
+    /* Format Nutrition Title
+    #health-info{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 14;
+    }*/
+    /* Format Body Text */
+    p{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 14;
+    }
+    /* Format Subtotal Text */
+    #subtotal{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 48;
+    }
+    /* Format Cost Text */
+    #cost{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 40;
+    }
 
-#footer{
-    text-align: right;
-    background-color: purple;
-    color: black;
-    font-family: 'Indie Flower', cursive;
-    font-size: 25;
-}
+
+
+
+
+
+
+
