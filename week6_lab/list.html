@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+            <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- javascript -->
     <script src="main.js" type="text/javascript"></script>
 </head>
@@ -32,9 +34,9 @@
 
                 </ol>
             </div>
-            <button class = "delete-item" onclick ="deleteList()"> Delete List </button>
+            <button id = "delete-list"> Delete List </button>
             <input id = "new-list-item" type="text"></input>
-            <button onclick="addListItem()">Add Item</button>
+            <button id = "add-item">Add Item</button>
         </div>
     </div>
 </body>
