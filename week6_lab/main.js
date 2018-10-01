@@ -1,4 +1,44 @@
 function addNewList() {
-    alert('hello world alert!');
-    console.log('hello world console');
+    alert('hello world!');
+}
+
+function addListItem() {
+    var list = document.getElementById("grocery-list");
+    var itemInput = document.getElementById("new-list-item");
+    var newItem = document.createElement("li");
+    newItem.appendChild(document.createTextNode(itemInput.value));
+    list.appendChild(newItem);
+    console.log('hello world');
+}
+
+function deleteListItem(item) {
+        // remove li element (item) from ol element (item.parentNode)
+        item.parentNode.removeChild(item);
+}
+
+function completeListItem(item) {
+    if (item.checked) { // true if the input checkbox is checked
+        item.parentNode.style.textDecoration = "line-through";
+        // in css, this would be: "text-decoration: line-through"
+    } else {
+        item.parentNode.style.textDecoration = "none";
+        // in css, this would be: "text-decoration: none"
+    }
+}
+
+function deleteList(){
+    //remove ol element(item)
+     var list = document.getElementById("grocery-list");
+     list.remove();
+}
+
+function addDueDate(item) {
+    //read in due date
+    var dueDate = document.getElementById("due-date");
+    //get list item value
+    var listItem = document.getElementById("list-item")
+    //create new list value
+    var listItemWithDueDate = listItem + dueDate;
+    //add due date to list item
+
 }
