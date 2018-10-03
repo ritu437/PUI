@@ -1,12 +1,33 @@
 /* Format Page Background */
     /* Format Background Image */
-    html{
-        background: url("Images/background image.jpg") no-repeat center center fixed;
-        background-color: grey;
+    body, html {
+        height: 100%;
+    }
+
+    #background{
+        position: fixed;
+        top: 0;
+        left: 0;
+        /*width: 100%
+
+        height: 100%;*/
+        min-height: 100%;
+        min-width: 1024px;
+        width: 100%;
+        height: auto;
+        background-image: url("Images/background_image.jpg");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        opacity: 0.45;
+        z-index: -1;
+        /*filter: alpha(opacity = 45);
+        background-position: center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -o-background-size: cover;*/
+
     }
 
     /* Format Navigation Bar */
@@ -16,39 +37,31 @@
     }
     .left{
         float: left;
-        width: 50px;
-        padding: 10px;
+        width: 25%;
+        padding: 5px;
 
     }
     .right{
         float: right;
-        width: 50px;
+        width: 25%;
         padding: 10px;
     }
         /* Format Menu Icon */
         /* Format Other Icons */
 
-    /* Format Contact Us Footer */
-    .footer{
-        text-align: right;
-        background-color: purple;
-        color: black;
-        font-family: 'Indie Flower', cursive;
-        font-size: 25;
-    }
-
 /* Format Page Text */
     /* Format Shop Name Text */
     #bunbun{
         text-align: center;
-        background-color: purple;
+        background-color: rgba(138, 79, 125, .30);
         color: black;
         font-family: 'Homemade Apple', cursive;
         font-size: 144;
+
     }
     #bake-shop{
         text-align: center;
-        background-color: purple;
+        background-color: rgba(138, 79, 125, .30);
         color: black;
         font-family: 'Italiana', serif;
         font-size: 72;
@@ -84,11 +97,12 @@
         font-family: 'Italiana', serif;
         font-size: 14;
     }
-        /* Format Large Buttons Text */
+
     button{
         color: black;
         font-family: 'Indie Flower', cursive;
     }
+    /* Format Large Buttons Text */
     .large-buttons{
         font-size: 48;
     }
@@ -96,7 +110,14 @@
     .small-buttons{
         font-size: 36;
     }
-
+    /* Format Contact Us Footer */
+    .footer{
+        text-align: right;
+        background-color: purple;
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 25;
+    }
     .featured-images{
         width = "589"
         height = "641"
