@@ -8,60 +8,90 @@
         position: fixed;
         top: 0;
         left: 0;
-        /*width: 100%
 
-        height: 100%;*/
         min-height: 100%;
         min-width: 1024px;
         width: 100%;
         height: auto;
-        background-image: url("Images/background_image.jpg");
 
+        background-image: url("Images/background_image.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-
         opacity: 0.45;
         z-index: -1;
-        /*filter: alpha(opacity = 45);
-        background-position: center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;*/
 
     }
 
     /* Format Navigation Bar */
-    .nav-icon-size{
-        width = "50"
-        height = "50"
+    .nav-bar{
+        width: 100%;
+        overflow: visible; /*UNSURE ABOUT THIS VALUE!!!!*/
     }
+
+    .nav-bar img{
+        width: = 10px;
+        height: = 1%;
+    }
+
     .left{
         float: left;
         width: 25%;
         padding: 5px;
 
     }
+    .left img {
+
+    }
+
     .right{
         float: right;
-        width: 25%;
+        /*width: 25%;*/
         padding: 10px;
     }
         /* Format Menu Icon */
         /* Format Other Icons */
 
+/* Size & Color Containers */
+    .shop-name{
+        position: absolute;
+        width: 350px;
+        height: 100%;
+        left: 60px;
+        top: 0px;
+
+        background: rgba(138, 79, 125, 0.3);
+    }
+    #grey-rect{
+        position: absolute;
+        width: 410px;
+        height: 841px;
+        left: 30px;
+        top: 88px;
+
+        background: rgba(136, 136, 119, 0.7);
+    }
+    .featured-text{
+        position: absolute;
+        width: 587px;
+        height: 83px;
+        left: 607px;
+        top: 812px;
+
+        background: rgba(239, 130, 117, 0.5);
+        filter: blur(7px);
+    }
+
 /* Format Page Text */
     /* Format Shop Name Text */
     #bunbun{
         text-align: center;
-        background-color: rgba(138, 79, 125, .30);
         color: black;
         font-family: 'Homemade Apple', cursive;
         font-size: 144;
-
+        width: ;
     }
     #bake-shop{
         text-align: center;
-        background-color: rgba(138, 79, 125, .30);
         color: black;
         font-family: 'Italiana', serif;
         font-size: 72;
@@ -118,9 +148,20 @@
         font-family: 'Indie Flower', cursive;
         font-size: 25;
     }
-    .featured-images{
-        width = "589"
-        height = "641"
+    img.featured-images{
+        /*position: absolute;
+        left: 607px;
+        right: 159px;
+        max-width: 589px;
+        max-height: 641px;*/
+        position: absolute;
+        max-width: 40.9%;
+        max-height: 62.6%;
+        left: 607px;
+        top: 159px;
+
+        background: url(Images/pumpkin spice buns.png);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     }
 
 
