@@ -18,19 +18,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.45;
-        z-index: -1;
-    }
-    #bun-bun{
-        text-align: center;
-        color: black;
-        font-family: 'Homemade Apple', cursive;
-        font-size: 144;
-    }
-    #bake-shop{
-        text-align: center;
-        color: black;
-        font-family: 'Italiana', serif;
-        font-size: 72;
+        z-index: -10;
     }
 
     /*Nav Bar*/
@@ -38,7 +26,7 @@
     .nav-bar{
         width: 100%;
         top: 0;
-        left: 0px;
+        left: 0;
     }
     .left-icon{
         position: relative;
@@ -76,38 +64,71 @@
         width: 410px;
         height: 841px;
         left: 30px;
-        top: 88px;
+        top: 40px;
         background: rgba(136, 136, 119, 0.7);
+        display: inline-block;
     }
     #purple-rect{
         position: absolute;
         width: 350px;
         height: 100%;
-        left: 60px;
-        top: 0px;
+        left: 60px; /*doesn't work for some reason??*/
+        top: 0;
         background: rgba(138, 79, 125, 0.3);
+        margin: 0;
+    }
+    #bun-bun{
+        text-align: center;
+        color: black;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 144;
+        line-height: 250px;
+        width: 386px;
+        margin: 0;
+        margin-top: 200px;
+
+    }
+    #bake-shop{
+        text-align: center;
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 72px;
+        line-height: 100px;
+        margin: 0;
     }
 
     /*Featured Item*/
 
     .specials{
-        left: 607px;
-        top: 159px;
+        position: relative;
+        left: 300px;
+        top: 0px;
+        display: inline-block;
     }
     .featured-image{
+        position: absolute;
+        clip: rect(0px,589px,50px,600px);
         width: 589px;
-        height: 641px;
-        background: url(pumpkin bun 2.png);
+        height: auto;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-        left: 0px;
-        top: 0px;
+        left: 0;
+        top: 0;
     }
     .featured-text{
-        left: 0px;
+        left: 0;
         display: inline;
+        width: 589px;
     }
 
     /*Product Tab*/
+    .product-tab{
+
+    }
+    .product-tab h3{
+        transform: rotate(-90deg);
+        transform-origin: left top 0;
+        float: right;
+    }
 
     /*Text Formatting*/
     h2{
