@@ -3,7 +3,9 @@
 /*Common Style Elements*/
 
     /*Page background*/
-
+    body{
+        height: 100%;
+    }
     .background{
         position: fixed;
         top: 0;
@@ -14,125 +16,53 @@
         width: 100%;
         height: auto;
 
-        background-image: url("Images/background_image.jpg");
+        background-image: url("Images/background-image.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.45;
-        z-index: -10;
+        z-index: -1;
     }
 
     /*Nav Bar*/
 
     .nav-bar{
+        position: relative;
         width: 100%;
         top: 0;
         left: 0;
+        z-index: 10;
     }
-    .left-icon{
-        position: relative;
-        left: 72px;
-        display: inline;
-    }
-    .left-icon img{
-        width: 50px;
-        height: 50px;
-    }
-    .right-icons{
-        display: inline;
-        float: right;
-    }
-    .right-icons img{
-        width: 50px;
-        height: 50px;
-    }
+        .left-icon{
+            position: relative;
+            left: 72px;
+            display: inline;
+        }
+            .left-icon img{
+                width: 50px;
+                height: 50px;
+            }
+        .right-icons{
+            position: relative;
+            display: inline;
+            float: right;
+        }
+            .right-icons img{
+                width: 50px;
+                height: 50px;
+            }
 
     /*Footer*/
 
     .footer{
+        position: relative;
         float: right;
         color: black;
         font-family: 'Indie Flower', cursive;
         font-size: 25;
     }
 
-/*Home Page Styling*/
-
-    /*Shop Name*/
-
-    #grey-rect{
-        position: relative;
-        width: 410px;
-        height: 841px;
-        left: 30px;
-        top: 40px;
-        background: rgba(136, 136, 119, 0.7);
-        display: inline-block;
-    }
-    #purple-rect{
-        position: absolute;
-        width: 350px;
-        height: 100%;
-        left: 60px; /*doesn't work for some reason??*/
-        top: 0;
-        background: rgba(138, 79, 125, 0.3);
-        margin: 0;
-    }
-    #bun-bun{
-        text-align: center;
-        color: black;
-        font-family: 'Homemade Apple', cursive;
-        font-size: 144;
-        line-height: 250px;
-        width: 386px;
-        margin: 0;
-        margin-top: 200px;
-
-    }
-    #bake-shop{
-        text-align: center;
-        color: black;
-        font-family: 'Italiana', serif;
-        font-size: 72px;
-        line-height: 100px;
-        margin: 0;
-    }
-
-    /*Featured Item*/
-
-    .specials{
-        position: relative;
-        left: 300px;
-        top: 0px;
-        display: inline-block;
-    }
-    .featured-image{
-        position: absolute;
-        clip: rect(0px,589px,50px,600px);
-        width: 589px;
-        height: auto;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
-        left: 0;
-        top: 0;
-    }
-    .featured-text{
-        left: 0;
-        display: inline;
-        width: 589px;
-    }
-
-    /*Product Tab*/
-    .product-tab{
-
-    }
-    .product-tab h3{
-        transform: rotate(-90deg);
-        transform-origin: left top 0;
-        float: right;
-    }
-
     /*Text Formatting*/
     h2{
-        background-color: brown;
         color: white;
         font-family: 'Indie Flower', cursive;
         font-size: 96;
@@ -155,16 +85,281 @@
     h6{
         color: black;
         font-family: 'Italiana', serif;
-        font-size: 20;
+        font-size: 14.5;
     }
     p{
         color: black;
         font-family: 'Italiana', serif;
         font-size: 14;
     }
-
     button{
         color: black;
         font-family: 'Indie Flower', cursive;
     }
+
+/*Home Page Styling*/
+
+    /*Shop Name*/
+
+    #grey-rect{
+        position: relative;
+        left: 30px;
+        top: 40px;
+        width: 410px;
+        height: 800px;
+        background: rgba(136, 136, 119, 0.7);
+        display: inline-block;
+    }
+    #purple-rect{
+        position: absolute;
+        left: 60px; /*doesn't work for some reason??*/
+        top: 0;
+        width: 350px;
+        height: 100%;
+        margin: 0;
+        background: rgba(138, 79, 125, 0.3);
+        display: inline-block;
+    }
+        #bun-bun{
+            text-align: center;
+            color: black;
+            font-family: 'Homemade Apple', cursive;
+            font-size: 144;
+            line-height: 250px;
+            width: 386px;
+            margin: 0;
+            margin-top: 200px;
+        }
+        #bake-shop{
+            text-align: center;
+            color: black;
+            font-family: 'Italiana', serif;
+            font-size: 72px;
+            line-height: 100px;
+            margin: 0;
+        }
+
+    /*Featured Item*/
+
+    .specials{
+        position: relative;
+        left: 300px;
+        top: 0px;
+        display: inline-block;
+    }
+        .featured-image{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 589px;
+            height: auto;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        }
+        .featured-text{
+            position: absolute;
+            left: 0;
+            display: inline;
+            width: 589px;
+        }
+
+    /*Product Tab*/
+    .product-tab-right{
+        position: relative;
+        left: 1343px;
+        top: 88px;
+        min-width: 150px;
+        height: 841px;
+        background: rgba(138, 79, 125, 0.3);
+        display: inline-block;
+    }
+        #product-tab-text h3{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: left bottom 0;
+            width: 100%;
+        }
+
+/*Product Page Styling*/
+    .product-menu{
+        float: left;
+        min-height: 700px;
+        background-color: grey;
+    }
+    .product-tab-left{
+        position: absolute;
+        min-width: 150px;
+        height: 841px;
+        left: 50px;
+        top: 88px;
+        background: rgba(138, 79, 125, 0.3);
+    }
+    .product-tab-left h3{
+        position: relative;
+        transform: rotate(-90deg);
+        transform-origin: left bottom 0;
+        float: right;
+        width: 100%;
+    }
+    .product-items{
+        position: relative;
+        background-color: grey;
+    }
+    .product-items img{
+        position: relative;
+        float: left;
+        opacity: 0.85;
+        z-index: 0;
+    }
+    .product-name{
+        position: relative;
+        width: 400px;
+        height: 350px;
+        display: inline;
+        left:0;
+        top: 0;
+        margin: 0;
+        z-index: 1;
+    }
+    .product-name h2{
+        display: inline;
+        left:0;
+        top: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+/*Product Page Styling*/
+    .product-info-container{
+        position: relative;
+        min-width: 300px;
+        width: 350px;
+        height: 100%;
+        background-color: rgba(138, 79, 125, 0.3);
+        z-index: 2;
+    }
+    .product-info-container img{
+        position: relative;
+        top: 50px;
+        min-width: 250px;
+        width: 325px;
+        height: auto;
+        margin: 12px;
+        margin-top: 0;
+        margin-bottom: 0;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+    .product-info-container h3{
+        position: relative;
+        top: 50px;
+        min-width: 250px;
+        width: 325px;
+        height: auto;
+        margin: 12px;
+        margin-top: 5px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .product-details-container{
+        position: relative;
+        top: 50px;
+        min-width: 275px;
+        width: 290px;
+        height: 350px;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 12px;
+        background-color: rgba(239, 130, 117, 0.5);
+        z-index: 3;
+    }
+    .product-details-container h5{
+        position: relative;
+        margin:0;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .product-details-container h6{
+        position: relative;
+        margin:0;
+        margin-bottom: 5px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .product-details-container p{
+        position: relative;
+        margin:0;
+        margin-bottom: 40px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .ordering-container{
+        position: relative;
+        min-width: 1000px;
+        width: 95%;
+        height: 841px;
+        padding: 15px;
+        margin: 12px;
+        background-color: rgba(136, 136, 119, 0.7);
+        z-index: 1;
+    }
+    .glaze-container{
+        position: relative;
+        float: right;
+        width: auto;
+    }
+    .glaze-container h2{
+        margin: 0;
+        text-align: center;
+    }
+    .qty-container{
+        position: relative;
+        float: right;
+    }
+
+    #subtotal-container{
+        position: relative;
+        float: right;
+    }
+    #subtotal-container h4{
+        position: relative;
+        display: inline;
+    }
+    #other-products{
+        position:relative;
+        float: left;
+    }
+    #subtotal{
+        font-family: 'Indie Flower', cursive;
+    }
+    /* Format Large Buttons Text */
+    .large-buttons{
+        float: right;
+        display: inline-block;
+        font-family: 'Indie Flower', cursive;
+        font-size: 45;
+        text-align: center;
+        border-radius: 10px;
+    }
+    /* Format Small Buttons Text */
+    .small-buttons{
+        position: relative;
+        width: 200px;
+        height: 100px;
+        margin-left: 2%;
+        float: left;
+        left: 0%;
+        font-size: 36;
+        text-align: center;
+        line-height: 110%;
+        border-radius: 10px;
+    }
+
+
+
+
+
 
