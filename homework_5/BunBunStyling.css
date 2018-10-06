@@ -1,13 +1,149 @@
 /*Style Ritu's Bun Bun Bake Shop pages*/
 
-/*Page background*/
+/*Common Style Elements*/
 
-/*Nav Bar*/
+    /*Page background*/
 
-/*Shop Name*/
+    .background{
+        position: fixed;
+        top: 0;
+        left: 0;
 
-/*Featured Item*/
+        min-height: 100%;
+        min-width: 1024px;
+        width: 100%;
+        height: auto;
 
-/*Product Tab*/
+        background-image: url("Images/background_image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.45;
+        z-index: -1;
+    }
+    #bun-bun{
+        text-align: center;
+        color: black;
+        font-family: 'Homemade Apple', cursive;
+        font-size: 144;
+    }
+    #bake-shop{
+        text-align: center;
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 72;
+    }
 
-/*Footer*/
+    /*Nav Bar*/
+
+    .nav-bar{
+        width: 100%;
+        top: 0;
+        left: 0px;
+    }
+    .left-icon{
+        position: relative;
+        left: 72px;
+        display: inline;
+    }
+    .left-icon img{
+        width: 50px;
+        height: 50px;
+    }
+    .right-icons{
+        display: inline;
+        float: right;
+    }
+    .right-icons img{
+        width: 50px;
+        height: 50px;
+    }
+
+    /*Footer*/
+
+    .footer{
+        float: right;
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 25;
+    }
+
+/*Home Page Styling*/
+
+    /*Shop Name*/
+
+    #grey-rect{
+        position: relative;
+        width: 410px;
+        height: 841px;
+        left: 30px;
+        top: 88px;
+        background: rgba(136, 136, 119, 0.7);
+    }
+    #purple-rect{
+        position: absolute;
+        width: 350px;
+        height: 100%;
+        left: 60px;
+        top: 0px;
+        background: rgba(138, 79, 125, 0.3);
+    }
+
+    /*Featured Item*/
+
+    .specials{
+        left: 607px;
+        top: 159px;
+    }
+    .featured-image{
+        width: 589px;
+        height: 641px;
+        background: url(pumpkin bun 2.png);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        left: 0px;
+        top: 0px;
+    }
+    .featured-text{
+        left: 0px;
+        display: inline;
+    }
+
+    /*Product Tab*/
+
+    /*Text Formatting*/
+    h2{
+        background-color: brown;
+        color: white;
+        font-family: 'Indie Flower', cursive;
+        font-size: 96;
+    }
+    h3{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+        font-size: 48;
+    }
+    h4{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 45;
+    }
+    h5{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 24;
+    }
+    h6{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 20;
+    }
+    p{
+        color: black;
+        font-family: 'Italiana', serif;
+        font-size: 14;
+    }
+
+    button{
+        color: black;
+        font-family: 'Indie Flower', cursive;
+    }
+
