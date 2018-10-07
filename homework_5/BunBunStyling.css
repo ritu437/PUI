@@ -171,7 +171,6 @@
         background: rgba(138, 79, 125, 0.3);
         padding: 15px;
         margin-top:10px;
-
     }
         .product-tab-right h3{
             text-align: center;
@@ -180,27 +179,38 @@
 
 /*Product Page Styling*/
     .product-menu{
+        position: relative;
         float: left;
         min-height: 700px;
         background-color: grey;
+        margin-top: 5px;
     }
     .product-tab-left{
-        position: absolute;
-        min-width: 150px;
-        height: 841px;
-        left: 50px;
-        top: 88px;
+        position: relative;
+        left:0;
+        width: 90px;
+        height: 675px;
         background: rgba(138, 79, 125, 0.3);
+        padding: 15px;
+        margin-top:5px;
+        display:inline-block;
     }
     .product-tab-left h3{
+        text-align: center;
+        margin-top:150px;
+        font-size: 40px;
+        line-height: 75px;
+        /*
         position: relative;
         transform: rotate(-90deg);
         transform-origin: left bottom 0;
         float: right;
-        width: 100%;
+        width: 100%; */
     }
     .products{
-        position: relative;
+        position: absolute;
+        top:0;
+        width: 1225px;
         background-color: grey;
         margin-left: 120px;
         padding-top: 5px;
