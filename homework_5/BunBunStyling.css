@@ -110,7 +110,7 @@
     #grey-rect{
         min-width: 200px;
         width: 300px;
-        height: 85%;
+        height: 87%;
         background: rgba(136, 136, 119, 0.7);
 
     }
@@ -133,7 +133,7 @@
             margin-top: 110px;
         }
         #bake-shop{
-            text-align: center;
+            text-align: right;
             color: black;
             font-family: 'Italiana', serif;
             font-size: 52px;
@@ -146,17 +146,17 @@
     .specials{
         left: 300px;
         top: 0px;
-
+        margin-top:10px;
     }
         .featured-image{
-            width: 570px;
+            width: 550px;
             height: auto;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
             margin-left: 150px;
             margin-right: 200px;
         }
         .featured-text{
-            width: 589px;
+            width: 550px;
             margin-top: 5px;
             margin-left: 150px;
             margin-right: 200px;
@@ -165,13 +165,18 @@
 
     /*Product Tab*/
     .product-tab-right{
-        height: 800px;
+        position: fixed;
+        right:0;
+        width: 125px;
+        height: 80%;
         background: rgba(138, 79, 125, 0.3);
+        padding: 15px;
+        margin-top:10px;
+
     }
-        #product-tab-text h3{
-            transform: rotate(-90deg);
-            width: auto;
-            height: auto;
+        .product-tab-right h3{
+            text-align: center;
+            margin-top:125px;
         }
 
 /*Product Page Styling*/
