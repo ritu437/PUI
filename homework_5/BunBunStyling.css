@@ -54,11 +54,13 @@
     /*Footer*/
 
     .footer{
-        position: relative;
-        float: right;
+        position: fixed;
+        bottom: 0;
+        right: 0;
         color: black;
         font-family: 'Indie Flower', cursive;
         font-size: 25;
+        z-index: 10;
     }
 
     /*Text Formatting*/
@@ -164,11 +166,11 @@
 
     /*Product Tab*/
     .product-tab-right{
-        position: relative;
-        left: 1343px;
-        top: 88px;
+        position: fixed;
+        right:0;
+        top: 40px;
         min-width: 150px;
-        height: 841px;
+        height: 800px;
         background: rgba(138, 79, 125, 0.3);
         display: inline-block;
     }
@@ -230,72 +232,76 @@
         text-align: center;
     }
 
-/*Product Page Styling*/
+/*Product Detail Page Styling*/
     .product-info-container{
-        position: relative;
+        position: absolute;
+        left: 60px; /*doesn't work for some reason??*/
+        top: 0;
         min-width: 300px;
         width: 350px;
-        height: 100%;
+        height: 150%;
+        margin: 0;
         background-color: rgba(138, 79, 125, 0.3);
         z-index: 2;
+        display: inline-block;
     }
-    .product-info-container img{
-        position: relative;
-        top: 50px;
-        min-width: 250px;
-        width: 325px;
-        height: auto;
-        margin: 12px;
-        margin-top: 0;
-        margin-bottom: 0;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    }
-    .product-info-container h3{
-        position: relative;
-        top: 50px;
-        min-width: 250px;
-        width: 325px;
-        height: auto;
-        margin: 12px;
-        margin-top: 5px;
-        text-align: center;
-        overflow: hidden;
-    }
-    .product-details-container{
-        position: relative;
-        top: 50px;
-        min-width: 275px;
-        width: 290px;
-        height: 350px;
-        padding: 5px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin: 12px;
-        background-color: rgba(239, 130, 117, 0.5);
-        z-index: 3;
-    }
-    .product-details-container h5{
-        position: relative;
-        margin:0;
-        margin-top: 25px;
-        margin-bottom: 5px;
-        text-align: center;
-        overflow: hidden;
-    }
-    .product-details-container h6{
-        position: relative;
-        margin:0;
-        margin-bottom: 5px;
-        text-align: center;
-        overflow: hidden;
-    }
-    .product-details-container p{
-        position: relative;
-        margin:0;
-        margin-bottom: 40px;
-        text-align: center;
-        overflow: hidden;
-    }
+        .product-info-container img{
+            position: relative;
+            top: 100px;
+            min-width: 250px;
+            width: 325px;
+            height: auto;
+            margin: 12px;
+            margin-top: 0;
+            margin-bottom: 0;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+        }
+        .product-info-container h3{
+            position: relative;
+            top: 100px;
+            min-width: 250px;
+            width: 325px;
+            height: auto;
+            margin: 12px;
+            margin-top: 5px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .product-details-container{
+            position: relative;
+            top: 125px;
+            min-width: 275px;
+            width: 290px;
+            height: 350px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 12px;
+            background-color: rgba(239, 130, 117, 0.5);
+            z-index: 3;
+        }
+            .product-details-container h5{
+                position: relative;
+                margin:0;
+                margin-top: 25px;
+                margin-bottom: 5px;
+                text-align: center;
+                overflow: hidden;
+            }
+            .product-details-container h6{
+                position: relative;
+                margin:0;
+                margin-bottom: 5px;
+                text-align: center;
+                overflow: hidden;
+            }
+            .product-details-container p{
+                position: relative;
+                margin:0;
+                margin-bottom: 40px;
+                text-align: center;
+                overflow: hidden;
+            }
     .ordering-container{
         position: relative;
         min-width: 1000px;
@@ -306,35 +312,64 @@
         background-color: rgba(136, 136, 119, 0.7);
         z-index: 1;
     }
-    .glaze-container{
-        position: relative;
-        float: right;
-        width: auto;
-    }
-    .glaze-container h2{
-        margin: 0;
-        text-align: center;
-    }
-    .qty-container{
-        position: relative;
-        float: right;
-    }
+        .glaze-container{
+            position: relative;
+            float: right;
+            width: auto;
+        }
+            .glaze-container h2{
+                margin: 0;
+                text-align: center;
+            }
+        .qty-container{
+            position: relative;
+            float: right;
+            margin-bottom: 15px;
+        }
+            .qty-container h2{
+                margin: 0;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .buttons{
+                display:flex;
+            }
+            #qty-button{
+                height: 75px;
+            }
 
-    #subtotal-container{
-        position: relative;
-        float: right;
-    }
-    #subtotal-container h4{
-        position: relative;
-        display: inline;
-    }
-    #other-products{
-        position:relative;
-        float: left;
-    }
-    #subtotal{
-        font-family: 'Indie Flower', cursive;
-    }
+        .next-steps{
+            position: relative;
+            float: right;
+            min-width: 785px;
+            width: auto;
+            margin-top: 100px;
+
+        }
+            .other-products{
+                position:relative;
+                width: 300px;
+                margin-right: 10px;
+                margin-top:50px;
+                display: inline-block;
+            }
+            .subtotal-container{
+                position: relative;
+                float: right;
+            }
+                #subtotal{
+                    font-family: 'Indie Flower', cursive;
+                    font-size: 45;
+                    text-align: center;
+                    margin: 0;
+                }
+                .subtotal-container h4{
+                    text-align: center;
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+
+
     /* Format Large Buttons Text */
     .large-buttons{
         float: right;
