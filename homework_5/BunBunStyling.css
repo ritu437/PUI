@@ -102,35 +102,35 @@
 /*Home Page Styling*/
 
     /*Shop Name*/
-
+    .main{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    }
     #grey-rect{
-        position: relative;
-        left: 30px;
-        top: 40px;
-        width: 410px;
-        height: 800px;
+        min-width: 200px;
+        width: 300px;
+        height: 85%;
         background: rgba(136, 136, 119, 0.7);
-        display: inline-block;
+
     }
     #purple-rect{
         position: absolute;
-        left: 60px; /*doesn't work for some reason??*/
-        top: 0;
-        width: 350px;
+        left: 15px;
+        top:0;
+        width:275px;
         height: 100%;
         margin: 0;
         background: rgba(138, 79, 125, 0.3);
-        display: inline-block;
     }
         #bun-bun{
             text-align: center;
             color: black;
             font-family: 'Homemade Apple', cursive;
-            font-size: 144;
-            line-height: 250px;
-            width: 386px;
+            font-size: 100;
+            line-height: 150px;
             margin: 0;
-            margin-top: 200px;
+            margin-top: 70px;
         }
         #bake-shop{
             text-align: center;
@@ -144,43 +144,28 @@
     /*Featured Item*/
 
     .specials{
-        position: relative;
         left: 300px;
         top: 0px;
-        display: inline-block;
+
     }
         .featured-image{
-            position: absolute;
-            left: 0;
-            top: 0;
             width: 589px;
             height: auto;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
         }
         .featured-text{
-            position: absolute;
-            left: 0;
-            display: inline;
             width: 589px;
         }
 
     /*Product Tab*/
     .product-tab-right{
-        position: fixed;
-        right:0;
-        top: 40px;
-        min-width: 150px;
         height: 800px;
         background: rgba(138, 79, 125, 0.3);
-        display: inline-block;
     }
         #product-tab-text h3{
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%) rotate(-90deg);
-            transform-origin: left bottom 0;
-            width: 100%;
+            transform: rotate(-90deg);
+            width: auto;
+            height: auto;
         }
 
 /*Product Page Styling*/
