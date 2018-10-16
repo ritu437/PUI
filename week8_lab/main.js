@@ -68,7 +68,12 @@
 
 
 $(document).ready(function(){
-    var animal = generateRandomAnimal();
+    if(JSON.parse(localStorage.getItem("savedAnimal")) !== null){
+        animal = JSON.parse(localStorage.getItem("savedAnimal"));
+    }
+    else{
+        var animal = generateRandomAnimal();
+    }
     $(".animal-name").text(animal.name); //set name text
     $(".animal-img").attr("src", animal.img); //set image
     $(".animal-age").text("Age: " + animal.age + " years old"); //set age text
