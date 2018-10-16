@@ -66,19 +66,34 @@
         }
     }
 
+    function clear(){
+        $("#add-animal").text("Clear Me"); //set button text
+        $("#add-animal").click(function(){ //bind handler for click event - clearing of animal
+            localStorage.removeItem("savedAnimal", JSON.stringify(animal)); //clear animal
+            $("#feedback").text("Cleared!"); //set feedback text
+            save();
+        })
+    }
+    function save(animal){
+        $("#add-animal").text("Save!"); //set button text
+        $("#add-animal").click(function(){ //bind handler for click event - saving of animal
+            localStorage.setItem("savedAnimal", JSON.stringify(animal)); //store animal
+            $("#feedback").text("Saved!"); //set feedback text
+            clear();
+        })
+    }
 
 $(document).ready(function(){
-    if(JSON.parse(localStorage.getItem("savedAnimal")) !== null){
-        animal = JSON.parse(localStorage.getItem("savedAnimal"));
+    if(JSON.parse(localStorage.getItem("savedAnimal")) !== null){ //there is an animal stored
+        animal = JSON.parse(localStorage.getItem("savedAnimal")); //set animal to previously stored animal
+        clear();
     }
-    else{
-        var animal = generateRandomAnimal();
+    else{ //there is no animal currently stored
+        var animal = generateRandomAnimal(); //set animal to newly generated animal
+        save(animal); //allow user to save animal
     }
     $(".animal-name").text(animal.name); //set name text
     $(".animal-img").attr("src", animal.img); //set image
     $(".animal-age").text("Age: " + animal.age + " years old"); //set age text
-    $("#add-animal").click(function(){ //bind handler for click event
-        localStorage.setItem("savedAnimal", JSON.stringify(animal)); //store animal
-        $("#feedback").text("Saved!");
-    })
+
 })
