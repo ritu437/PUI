@@ -40,13 +40,14 @@ p{
     text-align: center;
     font-size: 15px;
     font-family: 'Exo 2', sans-serif;
+    color: darkslategrey;
 }
 button{
     position: relative;
     display: block;
     margin:auto;
 
-    font-size: 15px;
+    font-size: 25px;
     font-family: 'Exo 2', sans-serif;
 
     color: crimson;
