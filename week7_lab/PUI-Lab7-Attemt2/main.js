@@ -1,7 +1,6 @@
 
 
 /*Constructors for zoo animals*/
-
     function Fox(name, age){
         this.name = name;
         this.age = age;
@@ -31,12 +30,24 @@
     }
 
 /* Array of zoo animals and their properties*/
-
     var animals = [ new Fox(), new Tiger(), new Leopard(), new Lynx()];
-    var ages = ["Lara", "Megahn", "Olaf", "Zori"];
-
-
+    var names = ["Lara", "Megahn", "Olaf", "Zori", "Bellize", "Telig"];
+    var ages = [1, 2, 2.5, 1.25, 3.5, 6]
+/* Random Name & Age Generator Functions */
     function generateRandomIndex(maxIndex){
         var randNum = Math.floor(Math.random()*maxIndex);
         console.log(randNum);
+        return randNum;
+    }
+    function generateRandomName(){
+        var randIndex = generateRandomIndex(names.length);
+        var randName = names[randIndex];
+        console.log(randName);
+        return randName;
+    }
+    function generateRandomAge(){
+        var randIndex = generateRandomIndex(ages.length);
+        var randAge = ages[randIndex];
+        console.log(randAge);
+        return randAge;
     }
