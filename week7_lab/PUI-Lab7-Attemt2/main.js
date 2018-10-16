@@ -29,3 +29,14 @@
         this.type = "Lynx"
         this.img = "lynx.png"
     }
+
+/* Array of zoo animals and their properties*/
+
+    var animals = [ new Fox(), new Tiger(), new Leopard(), new Lynx()];
+    var ages = ["Lara", "Megahn", "Olaf", "Zori"];
+
+
+    function generateRandomIndex(maxIndex){
+        var randNum = Math.floor(Math.random()*maxIndex);
+        console.log(randNum);
+    }
