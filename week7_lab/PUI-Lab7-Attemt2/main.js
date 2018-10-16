@@ -66,4 +66,8 @@
         }
     }
 
-/* Create new Animals */
+
+$(document).ready(function(){
+    var animal = generateRandomAnimal();
+    $(".animal-img").attr("src", animal.img)
+})
