@@ -1,0 +1,53 @@
+
+.animal-name{
+    font-size: 92px;
+    font-family: 'Quicksand', sans-serif;
+    color: indianred;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.animal-img{
+    position: relative;
+    display: block;
+    margin: auto;
+
+    min-width: 100;
+    min-height: auto;
+    height: 300px;
+    width: auto;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+}
+.animal-age{
+    font-size: 35px;
+    font-family: 'Exo 2', sans-serif;
+    color: firebrick;
+    margin-top: 7px;
+    margin-bottom: 40px;
+}
+
+body{
+    background-color: white;
+}
+h1{
+    position: relative;
+    text-align: center;
+}
+p{
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+}
+button{
+    position: relative;
+    display: block;
+    margin:auto;
+
+    font-size: 15px;
+    font-family: 'Exo 2', sans-serif;
+
+    color: crimson;
+}
