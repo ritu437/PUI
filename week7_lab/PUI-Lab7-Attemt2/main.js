@@ -11,14 +11,14 @@
     function Tiger(name, age){
         this.name = name;
         this.age = age;
-        this.type = "Siberian Tiger"
+        this.type = "Tiger"
         this.img = "tiger.jpg"
     }
 
     function Leopard(name, age){
         this.name = name;
         this.age = age;
-        this.type = "Snow Leopard"
+        this.type = "Leopard"
         this.img = "leopard.jpg"
     }
 
@@ -33,21 +33,37 @@
     var animals = [ new Fox(), new Tiger(), new Leopard(), new Lynx()];
     var names = ["Lara", "Megahn", "Olaf", "Zori", "Bellize", "Telig"];
     var ages = [1, 2, 2.5, 1.25, 3.5, 6]
-/* Random Name & Age Generator Functions */
+
+/* Random Name, Age, and Animal Generator Functions */
     function generateRandomIndex(maxIndex){
         var randNum = Math.floor(Math.random()*maxIndex);
-        console.log(randNum);
         return randNum;
     }
     function generateRandomName(){
         var randIndex = generateRandomIndex(names.length);
         var randName = names[randIndex];
-        console.log(randName);
         return randName;
     }
     function generateRandomAge(){
         var randIndex = generateRandomIndex(ages.length);
         var randAge = ages[randIndex];
-        console.log(randAge);
         return randAge;
     }
+    function generateRandomAnimal(){
+        var randIndex = generateRandomIndex(animals.length);
+        var randAnimal = animals[randIndex];
+        if(randAnimal instanceof Fox){
+            return new Fox(generateRandomName(), generateRandomAge());
+        }
+        if(randAnimal instanceof Tiger){
+            return new Tiger(generateRandomName(), generateRandomAge());
+        }
+        if(randAnimal instanceof Leopard){
+            return new Leopard(generateRandomName(), generateRandomAge());
+        }
+        if(randAnimal instanceof Lynx){
+            return new Lynx(generateRandomName(), generateRandomAge());
+        }
+    }
+
+/* Create new Animals */
