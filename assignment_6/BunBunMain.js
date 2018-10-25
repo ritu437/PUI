@@ -12,14 +12,11 @@
 
     /*Glaze Selection - Button Click*/
     function chooseGlaze(){
-        /*Change Button Color*/
-        $("#add-animal").text("Save!"); //set button text
-        /*Update Glaze property*/
-        /*Update Image property*/
+
     }
 
 
-    /*Add Bun to Cart*/
+    /*Add Bun to Cart
     function add(bun){
         $("#add-animal").text("Save!"); //set button text
         $("#add-animal").click(function(){ //bind handler for click event - saving of animal
@@ -33,7 +30,8 @@
             }
             clear();
         })
-    }
+    }*/
+
 /*on document ready????*/
 $(document).ready(function(){
     /*Declare an int variable orderTotal*/
@@ -43,9 +41,32 @@ $(document).ready(function(){
 
     /*PRODUCT DETAIL PAGE*/
     /*Glaze Selection - Button Click*/
+
+    $(".glaze-button").click(function(){
         /*Change Button Color*/
+        $(".glaze-button").removeClass("active");
+        $(this).addClass("active");
         /*Update Glaze property*/
+        switch($(this).attr("value")){
+            case "sug-milk":
+                $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
+                console.log("sug");
+                break;
+            case "van-milk":
+                $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
+                console.log("van");
+                break;
+            case "doub-choc":
+                $("#bun-img").attr("src", "Assets/Images/chocolate-buns.jpg"); //set image
+                console.log("choc");
+                break;
+            default:
+                console.log("orig");
+                $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
+                break;
         /*Update Image property*/
+        }
+    })
 
     /*Glaze Selection - Button Click*/
 
@@ -74,25 +95,4 @@ $(document).ready(function(){
         /*pull info from cart & create divs as necessary??????????*/
 
     /*Display Order Total*/
-
-
-
-
-
-
-/*Create Bun and Update Product Detail Page*/
-$(document).ready(function(){
-    var selectedBun
-    if(JSON.parse(localStorage.getItem("savedAnimal")) !== null){ //there is an animal stored
-        animal = JSON.parse(localStorage.getItem("savedAnimal")); //set animal to previously stored animal
-        clear();
-    }
-    else{ //there is no animal currently stored
-        var animal = generateRandomAnimal(); //set animal to newly generated animal
-        save(animal, savedAnimals); //allow user to save animal
-    }
-    $(".animal-name").text(animal.name); //set name text
-    $(".animal-img").attr("src", animal.img); //set image
-    $(".animal-age").text("Age: " + animal.age + " years old"); //set age text
-
 })

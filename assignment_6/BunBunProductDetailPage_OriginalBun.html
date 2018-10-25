@@ -42,7 +42,7 @@
             <!--Product Info Panel-->
             <div class = "product-info-container">
                 <!--Product Image-->
-                <img id = "bun-img">
+                <img id = "bun-img" src = "Assets/Images/original-buns.png" alt = "Original">
                 <!--Product Name-->
                 <h3 id = "bun-type"></h3>
                 <!--Product Details-->
@@ -62,24 +62,24 @@
                     <div class = "glaze-container">
                         <h2> 1) Pick a Glaze! </h2>
                         <div class = "buttons">
-                            <button class = "small-buttons"> NONE </button>
-                            <button class = "small-buttons"> Sugar Milk </button>
+                            <button class = "small-buttons glaze-button" value = "none"> NONE </button>
+                            <button class = "small-buttons glaze-button" value = "sug-milk"> Sugar Milk </button>
                         </div>
                         <div class = "buttons">
-                            <button class = "small-buttons"> Vanilla Milk </button>
-                            <button class = "small-buttons"> Double Chocolate </button>
+                            <button class = "small-buttons glaze-button" value = "van-milk"> Vanilla Milk </button>
+                            <button class = "small-buttons glaze-button" value = "doub-choc"> Double Chocolate </button>
                         </div>
                     </div>
                     <!--Quantity-->
                     <div class = "qty-container">
                         <h2> 2) How Many? </h2>
                         <div class = "buttons">
-                            <button class = "small-buttons" value = "1"> 1X </button>
-                            <button class = "small-buttons" value = "3"> 3X </button>
+                            <button class = "small-buttons qty-button" value = "1"> 1X </button>
+                            <button class = "small-buttons qty-button" value = "3"> 3X </button>
                         </div>
                         <div class = "buttons">
-                            <button class = "small-buttons" value = "6"> 6X </button>
-                            <button class = "small-buttons" value = "12"> 12X </button>
+                            <button class = "small-buttons qty-button" value = "6"> 6X </button>
+                            <button class = "small-buttons qty-button" value = "12"> 12X </button>
                         </div>
                     </div>
                 </div>
@@ -101,6 +101,10 @@
 
             <!--footer-->
             <div class = "footer"> contact us! </div>
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!--JavaScript File-->
+        <script src = "BunBunMain.js" type = "text/javascript"></script>
     </body>
 
 </hmtl>
