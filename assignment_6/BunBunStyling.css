@@ -491,6 +491,9 @@
         border-radius: 10px;
     }
 
+    .active{
+        background-color: rgba(138, 79, 125, 0.9);
+    }
 
 
 
