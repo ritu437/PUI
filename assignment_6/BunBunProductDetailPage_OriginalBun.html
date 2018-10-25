@@ -36,17 +36,19 @@
             </div>
         </nav>
 
-            <!--Product Info Panel-->
+        <!--Main Content for Product Detail Page-->
+        <div class = "main">
 
+            <!--Product Info Panel-->
             <div class = "product-info-container">
                 <!--Product Image-->
-                <img src = "Assets/Images/chocolate-buns.jpg" alt = "Chocolate Glazed Original Bun">
+                <img id = "bun-img">
                 <!--Product Name-->
-                <h3> the ORIGINAL </h3>
+                <h3 id = "bun-type"></h3>
                 <!--Product Details-->
                 <div class = "product-details-container" >
                     <h5> Product Details </h5>
-                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.  </p>
+                    <p> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
                     <h6> HEALTH INFORMATION </h6>
                     <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -55,40 +57,48 @@
 
             <!--Order Options-->
             <div class = "ordering-container">
-                <!--Glaze-->
-                <div class = "glaze-container">
-                    <h2> Glaze </h2>
-                    <div class = "buttons">
-                        <button class = "small-buttons"> NONE </button>
-                        <button class = "small-buttons"> Sugar Milk </button>
-                        <button class = "small-buttons"> Vanilla Milk </button>
-                        <button class = "small-buttons"> Double Chocolate </button>
+                <div class = "selection-container">
+                    <!--Glaze-->
+                    <div class = "glaze-container">
+                        <h2> 1) Pick a Glaze! </h2>
+                        <div class = "buttons">
+                            <button class = "small-buttons"> NONE </button>
+                            <button class = "small-buttons"> Sugar Milk </button>
+                        </div>
+                        <div class = "buttons">
+                            <button class = "small-buttons"> Vanilla Milk </button>
+                            <button class = "small-buttons"> Double Chocolate </button>
+                        </div>
                     </div>
-                </div>
-                <!--Quantity-->
-                <div class = "qty-container">
-                    <h2> Qty </h2>
-                    <div class = "buttons">
-                        <button class = "small-buttons" id = "qty-button"> 1X </button>
-                        <button class = "small-buttons" id = "qty-button"> 3X </button>
-                        <button class = "small-buttons" id = "qty-button"> 6X </button>
-                        <button class = "small-buttons" id = "qty-button"> 12X </button>
+                    <!--Quantity-->
+                    <div class = "qty-container">
+                        <h2> 2) How Many? </h2>
+                        <div class = "buttons">
+                            <button class = "small-buttons" value = "1"> 1X </button>
+                            <button class = "small-buttons" value = "3"> 3X </button>
+                        </div>
+                        <div class = "buttons">
+                            <button class = "small-buttons" value = "6"> 6X </button>
+                            <button class = "small-buttons" value = "12"> 12X </button>
+                        </div>
                     </div>
                 </div>
 
-                <div class = "next-steps">
+                <div class = "next-steps-container">
+                    <!--Subtotal Info-->
+                    <div class = "subtotal-container">
+                        <h4 id = "subtotal-txt"> subtotal </h4>
+                        <h4 id = "bun-subtotal"> $ 0.00 </h4>
+                        <button class = "large-buttons"> ADD to Cart </button>
+                    </div>
                     <!--Go Back to Other Products-->
                     <div class = "other-products">
                         <button class = "large-buttons"> See Other Products!! </button>
                     </div>
-                    <!--Subtotal Info-->
-                    <div class = "subtotal-container">
-                        <h4 id = "subtotal"> subtotal </h4>
-                        <h4> $ 0.00 </h4>
-                        <button class = "large-buttons"> ADD to Cart </button>
-                    </div>
                 </div>
             </div>
+        </div>
+
             <!--footer-->
             <div class = "footer"> contact us! </div>
     </body>

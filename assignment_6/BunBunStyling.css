@@ -28,9 +28,10 @@
     .nav-bar{
         position: relative;
         width: 100%;
-        top: 0;
+        top: 2;
         left: 0;
         z-index: 10;
+        margin-bottom: 5px;
     }
         .left-icon{
             position: relative;
@@ -236,9 +237,10 @@
         position: relative;
         left:40;
         width: 95px;
-        height: 675px;
+        height: 638px;
         padding: 15px;
         display:inline-block;
+        background: rgba(138, 79, 125, 0.3);
     }
     .product-tab-left h3{
         text-align: center;
@@ -261,7 +263,7 @@
         position: relative;
         float: left;
         width: 400px;
-        height: 350px;
+        height: 332px;
         opacity: 0.55;
         z-index: 0;
     }
@@ -271,7 +273,7 @@
         top: 0;
         display: inline;
         width: 400px;
-        height: 350px;
+        height: 332px;
         margin: 0;
         padding-left: 5px;
         padding-top: 24px;
@@ -284,7 +286,7 @@
     .product-name a{
         color: white;
         font-family: 'Indie Flower', cursive;
-        font-size: 96;
+        font-size: 86;
         text-decoration: none;
         font-weight: bold;
     }
@@ -301,8 +303,8 @@
         position: absolute;
         left: 60px; /*doesn't work for some reason??*/
         top: 0;
-        min-width: 300px;
-        width: 350px;
+        min-width: 250px;
+        width: 300px;
         height: 100%;
         margin: 0;
         background-color: rgba(138, 79, 125, 0.3);
@@ -311,9 +313,9 @@
     }
         .product-info-container img{
             position: relative;
-            top: 100px;
-            min-width: 250px;
-            width: 325px;
+            top: 90px;
+            min-width: 200px;
+            width: 275px;
             height: auto;
             margin: 12px;
             margin-top: 0;
@@ -322,32 +324,34 @@
         }
         .product-info-container h3{
             position: relative;
-            top: 100px;
-            min-width: 250px;
-            width: 325px;
+            top: 90px;
+            min-width: 200px;
+            width: 275px;
             height: auto;
             margin: 12px;
             margin-top: 5px;
+            margin-bottom: 0px;
             text-align: center;
             overflow: hidden;
         }
         .product-details-container{
             position: relative;
-            top: 125px;
-            min-width: 275px;
-            width: 290px;
-            height: 350px;
+            top: 100px;
+            min-width: 200px;
+            width: 245px;
+            height: 300px;
             padding: 5px;
             padding-left: 15px;
             padding-right: 15px;
             margin: 12px;
+            margin-top: 0px;
             background-color: rgba(239, 130, 117, 0.5);
             z-index: 3;
         }
             .product-details-container h5{
                 position: relative;
                 margin:0;
-                margin-top: 25px;
+                margin-top: 5px;
                 margin-bottom: 5px;
                 text-align: center;
                 overflow: hidden;
@@ -362,7 +366,7 @@
             .product-details-container p{
                 position: relative;
                 margin:0;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
                 text-align: center;
                 overflow: hidden;
             }
@@ -370,30 +374,40 @@
         position: relative;
         min-width: 1000px;
         width: 95%;
-        height: 841px;
+        height: 650px;
         padding: 15px;
         margin: 12px;
         background-color: rgba(136, 136, 119, 0.7);
         z-index: 1;
     }
+        .selection-container{
+            position: absolute;
+            left: 0;
+            width: 100%;
+        }
         .glaze-container{
             position: absolute;
-            right: 50px;
-            width: auto;
+            left: 400px;
+            width: 450px;
         }
             .glaze-container h2{
                 margin: 0;
-                text-align: center;
+                text-align: left;
+                line-height: 130px;
+                font-size: 70;
             }
         .qty-container{
             position: absolute;
-            right: 50px;
-            top: 300px;
+            left: 400px;
+            width: 400px;
+            top: 350px;
             margin-bottom: 15px;
         }
             .qty-container h2{
                 margin: 0;
                 margin-bottom: 15px;
+                text-align: left;
+                font-size: 70;
                 text-align: center;
             }
             .buttons{
@@ -435,11 +449,23 @@
                     margin-bottom: 10px;
                 }
 
+/*Cart Page Styling*/
     .cart-container{
         width: 993px;
         height: 670px;
         background-color: rgba(136, 136, 119, 0.7);
     }
+        #back-to-bun{
+            color: black;
+            font-family: 'Italiana', serif;
+            font-size: 26;
+            text-align: center;
+        }
+        .cart-container h2{
+            display: inline-block;
+            font-size: 96;
+        }
+
 
     /* Format Large Buttons Text */
     .large-buttons{
