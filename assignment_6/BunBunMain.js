@@ -1,36 +1,25 @@
 
 /*Constructor for Buns*/
-    function Bun(bunType, bunImg, bunPrice){
+    function Bun(bunType, bunPrice, bunIndex){
         this.type = bunType;
         this.price = bunPrice;
-        this.img = bunImg;
         this.glaze = "None";
+        this.img = "Assets/Images/original-buns.png";
         this.qty = 0;
-        this.subtotal = qty*bunPrice;
+        this.subtotal = (this.qty)*bunPrice;
+        this.index = bunIndex;
     }
 
+/*Map Glaze & Image
+var glazeImgMap = {""};*/
 
-    /*Glaze Selection - Button Click*/
-    function chooseGlaze(){
-
+function getOrderTotal(shoppingCart){
+    var total = 0;
+    for(var i = 0; i < shoppingCart.length; i++){
+        total += shoppingCart[i].subtotal;
     }
-
-
-    /*Add Bun to Cart
-    function add(bun){
-        $("#add-animal").text("Save!"); //set button text
-        $("#add-animal").click(function(){ //bind handler for click event - saving of animal
-            localStorage.setItem("savedAnimal", JSON.stringify(animal)); //store animal
-            $("#feedback").text("Saved!"); //set feedback text
-            for(int i = 0; i<5; i++){
-                if(savedAnimals[i] === null){
-                    savedAnimals[i] = savedAnimal;
-                    break;
-                }
-            }
-            clear();
-        })
-    }*/
+    return total;
+}
 
 /*on document ready????*/
 $(document).ready(function(){
@@ -39,14 +28,14 @@ $(document).ready(function(){
     /*Declare an int variable numItems*/
     var numItems = 0;
 
+
     /*PRODUCT DETAIL PAGE*/
     /*Glaze Selection - Button Click*/
-
     $(".glaze-button").click(function(){
         /*Change Button Color*/
         $(".glaze-button").removeClass("active");
         $(this).addClass("active");
-        /*Update Glaze property*/
+        /*Update Image property*/
         switch($(this).attr("value")){
             case "sug-milk":
                 $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
@@ -64,26 +53,67 @@ $(document).ready(function(){
                 console.log("orig");
                 $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
                 break;
-        /*Update Image property*/
         }
-    })
+    });
 
-    /*Glaze Selection - Button Click*/
-
-    /*Quantity Selection- Button Click*/
+    /*Quantity Selection - Button Click*/
+    $(".qty-button").click(function(){
         /*Change Button Color*/
-        /*Update Quantity property*/
+        $(".qty-button").removeClass("active");
+        $(this).addClass("active");
         /*Update Subtotal*/
+        switch($(this).attr("value")){
+            case "3":
+                var subtot = 3*3;
+                $("#bun-subtotal").text("$" + subtot +".00"); //set name text
+                break;
+            case "6":
+                var subtot = 6*3;
+                $("#bun-subtotal").text("$" + subtot +".00"); //set name text
+                console.log("6");
+                break;
+            case "12":
+                var subtot = 12*3;
+                $("#bun-subtotal").text("$" + subtot +".00"); //set name text
+                console.log("12");
+                break;
+            default:
+                console.log("1");
+                var subtot = 1*3;
+                $("#bun-subtotal").text("$" + subtot +".00"); //set name text
+                break;
+        }
+    });
 
     /*Adding Bun to Cart*/
-        /*check if cart exists in local storage*/
-            /*if no*/
-                /*create a cart array*/
-                /*save it to local storage*/
-            /*then*/
-                /*add bun to cart array*/
-                /*update numItems*/
-                /*update orderTotal*/
+    $(".cart-add-button").click(function(){
+        /*Check if shopping cart array exists in local storage*/
+        if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
+            /*Declare an array variable shoppingCart*/
+            var shoppingCart = [];
+            console.log("no cart");
+        }
+        else{ /*shopping cart exists in local storage*/
+            /*get shoppingCart saved in local storage*/
+            shoppingCart = JSON.parse(localStorage.getItem("cart"));
+            console.log("cart exists");
+        }
+        /*update numItems*/
+        numItems = shoppingCart.length;
+        console.log(numItems);
+        /*create bun object*/
+        var bun = new Bun("The Original", 3, numItems)
+        console.log("new bun");
+        /*add bun object to shoppingCart*/
+        shoppingCart[numItems] = bun; /*adding new bun object to end of array list*/
+        /*Save shoppingCart to local storage*/
+        localStorage.setItem("cart", JSON.stringify(shoppingCart));
+        console.log("set cart");
+        /*update orderTotal*/
+        orderTotal = getOrderTotal(shoppingCart);
+        console.log(orderTotal);
+    });
+
 
     /*CART PAGE*/
     /*Deleting Bun from Cart*/
