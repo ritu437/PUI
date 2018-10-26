@@ -54,19 +54,15 @@ $(document).ready(function(){
         /*Update Image property*/
         switch($(this).attr("value")){
             case "sug-milk":
-                $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
-                console.log("sug");
+                $("#bun-img").attr("src", "Assets/Images/frosted-blackberry-buns.jpg"); //set image
                 break;
             case "van-milk":
-                $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
-                console.log("van");
+                $("#bun-img").attr("src", "Assets/Images/pumpkin-spice-buns.png"); //set image
                 break;
             case "doub-choc":
                 $("#bun-img").attr("src", "Assets/Images/chocolate-buns.jpg"); //set image
-                console.log("choc");
                 break;
             default:
-                console.log("orig");
                 $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
                 break;
         }
@@ -170,7 +166,8 @@ $(document).ready(function(){
             divProduct.appendChild(divBunImgName);
                 /*create a node (image)*/
                 var bunImgN = document.createElement("img");
-                bunImgN.src = "Assets/Images/original-buns.png";
+                imgSrc = shoppingCart[objIndex].img;
+                bunImgN.src = imgSrc;
                 bunImgN.setAttribute("width", "auto");
                 bunImgN.setAttribute("height", "100px");
                 bunImgN.setAttribute("alt", "BUN IMAGE");
