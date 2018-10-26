@@ -180,7 +180,9 @@ $(document).ready(function(){
                 bunImgN.setAttribute("alt", "BUN IMAGE");
                 document.body.appendChild(bunImgN);
                 /*create a node (text)*/
-                var bunNameN = document.createTextNode("GET BUN NAME");
+                var thing1 = (shoppingCart[objIndex]).bunQty;
+                console.log("thing 1: " + thing1);
+                var bunNameN = document.createTextNode("name");
                 divBunImgName.appendChild(bunImgN);
             /*create a div element (property texts)*/
             var divText = document.createElement("div");
@@ -212,13 +214,13 @@ $(document).ready(function(){
                 var glazeE = document.createElement("p");
                 divProperties.appendChild(glazeE);
                     /*create a note (text)*/
-                    var bunGlazeN = document.createTextNode("GET glaze VALUE");
+                    var bunGlazeN = document.createTextNode("glaze");
                     glazeE.appendChild(bunGlazeN);
                 /*create a p element (quantity)*/
                 var quantityE = document.createElement("p");
                 divProperties.appendChild(quantityE);
                     /*create a note (text)*/
-                    var bunQuantityN = document.createTextNode("GET qty VALUE");
+                    var bunQuantityN = document.createTextNode("qty");
                     quantityE.appendChild(bunQuantityN);
                 /*create a p element (subtotal)*/
                 var subtotalE = document.createElement("p");
