@@ -470,7 +470,7 @@
             position: relative;
             left: 400px;
         }
-        .cart-items-container{
+        #cart-items-container{
             display: inline-block;
             position: relative;
             width: 95%;
@@ -478,7 +478,7 @@
             margin: 10px;
             margin-left:25px;
         }
-            .cart-items-container div{
+            .product div{
                 display: inline-block;
                 position: relative;
                 height:100px;
@@ -488,7 +488,7 @@
                 width: 50px;
             }
             .which-bun{
-                width: 150px;
+                width: 250px;
             }
             .property-text{
                 width: 100px;

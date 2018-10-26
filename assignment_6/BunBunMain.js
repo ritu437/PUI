@@ -137,36 +137,83 @@ $(document).ready(function(){
             /*FUTURE IMPROVEMENTS*/
         })
     });
-
-
-
-
-
+    console.log("hi?");
     /*CART PAGE*/
     /*Display Buns in Cart*/
     /*For Each Bun in the Cart*/
+    for(var i = 0; i < 2; i++){
+        console.log("in the for loop");
         /*create a div element (product)*/
+        var divProduct = document.createElement("div");
+        divProduct.setAttribute("class", "product");
             /*create a div element (delete)*/
+            var divDelete = document.createElement("div");
+            divDelete.setAttribute("class", "delete-button");
+            divProduct.appendChild(divDelete);
                 /*create a node (delete button)*/
+                var deleteBunN = document.createElement("button");
+                divDelete.appendChild(deleteBunN);
             /*create a div element (bun)*/
+            var divBunImgName = document.createElement("div");
+            divBunImgName.setAttribute("class", "which-bun");
+            divProduct.appendChild(divBunImgName);
                 /*create a node (image)*/
+                var bunImgN = document.createElement("img");
+                bunImgN.src = "Assets/Images/original-buns.png";
+                bunImgN.setAttribute("width", "200px");
+                bunImgN.setAttribute("height", "auto");
+                bunImgN.setAttribute("alt", "BUN IMAGE");
+                document.body.appendChild(bunImgN);
                 /*create a node (text)*/
+                var bunNameN = document.createTextNode("GET BUN NAME");
+                divBunImgName.appendChild(bunImgN);
             /*create a div element (property texts)*/
+            var divText = document.createElement("div");
+            divText.setAttribute("class", "property-text");
+            divProduct.appendChild(divText);
                 /*create a p element (glaze)*/
+                var glazeT = document.createElement("p");
+                divText.appendChild(glazeT);
                     /*create a note (text)*/
+                    var glazeN = document.createTextNode("glaze");
+                    glazeT.appendChild(glazeN);
                 /*create a p element (quantity)*/
+                var quantityT = document.createElement("p");
+                divText.appendChild(quantityT);
                     /*create a note (text)*/
+                    var quantityN = document.createTextNode("quantity");
+                    quantityT.appendChild(quantityN);
                 /*create a p element (subtotal)*/
+                var subtotalT = document.createElement("p");
+                divText.appendChild(subtotalT);
                     /*create a note (text)*/
+                    var subtotalN = document.createTextNode("subtotal");
+                    subtotalT.appendChild(subtotalN);
             /*create a div element (bun properties)*/
+            var divProperties = document.createElement("div");
+            divProperties.setAttribute("class", "bun-properties");
+            divProduct.appendChild(divProperties);
                 /*create a p element (glaze)*/
+                var glazeE = document.createElement("p");
+                divProperties.appendChild(glazeE);
                     /*create a note (text)*/
+                    var bunGlazeN = document.createTextNode("GET glaze VALUE");
+                    glazeE.appendChild(bunGlazeN);
                 /*create a p element (quantity)*/
+                var quantityE = document.createElement("p");
+                divProperties.appendChild(quantityE);
                     /*create a note (text)*/
+                    var bunQuantityN = document.createTextNode("GET qty VALUE");
+                    quantityE.appendChild(bunQuantityN);
                 /*create a p element (subtotal)*/
+                var subtotalE = document.createElement("p");
+                divProperties.appendChild(subtotalE);
                     /*create a note (text)*/
-
-
+                    var bunSubtotalN = document.createTextNode("GET subtot VALUE");
+                    subtotalE.appendChild(bunSubtotalN);
+        var productE = document.getElementById("cart-items-container");
+        productE.appendChild(divProduct);
+    } /*end for loop*/
 
 /*<div class = "product1"> <!--product 1-->
                         <button class = "delete">x</button><!--delete button-->
@@ -201,5 +248,6 @@ $(document).ready(function(){
         /*update orderTotal*/
 
     /*Display Order Total*/
+
 
     }); /*end doc on ready function*/
