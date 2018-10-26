@@ -1,13 +1,13 @@
 
 /*Constructor for Buns*/
     function Bun(bunType, bunPrice, bunGlaze, bunQty, bunIndex){
-        this.type = bunType;
+        this.bunType = bunType;
         this.price = bunPrice;
         this.glaze = bunGlaze;
         this.img = "Assets/Images/original-buns.png";
         this.qty = bunQty;
         this.subtotal = bunQty*bunPrice;
-        this.index = bunIndex;
+        this.bunIndex = bunIndex;
     }
 
 /*Map Glaze & Image*/
@@ -122,7 +122,8 @@ $(document).ready(function(){
                         }
 
                         /*define bun glaze*/
-                        var bunGlaze = $(".glaze-button.active").attr("value");
+                        var bunGlaze = $(".glaze-button.active").text();
+                        console.log(bunGlaze);
                         /*define bun qty*/
                         var bunQty = $(".qty-button.active").attr("value");
                         /*create bun object*/
@@ -180,8 +181,6 @@ $(document).ready(function(){
                 bunImgN.setAttribute("alt", "BUN IMAGE");
                 document.body.appendChild(bunImgN);
                 /*create a node (text)*/
-                var thing1 = (shoppingCart[objIndex]).bunQty;
-                console.log("thing 1: " + thing1);
                 var bunNameN = document.createTextNode("name");
                 divBunImgName.appendChild(bunImgN);
             /*create a div element (property texts)*/
@@ -214,24 +213,30 @@ $(document).ready(function(){
                 var glazeE = document.createElement("p");
                 divProperties.appendChild(glazeE);
                     /*create a note (text)*/
-                    var bunGlazeN = document.createTextNode("glaze");
+                    var bunGlazeN = document.createTextNode(((shoppingCart[objIndex]).glaze).toString());
                     glazeE.appendChild(bunGlazeN);
                 /*create a p element (quantity)*/
                 var quantityE = document.createElement("p");
                 divProperties.appendChild(quantityE);
                     /*create a note (text)*/
-                    var bunQuantityN = document.createTextNode("qty");
+                    var bunQuantityN = document.createTextNode(((shoppingCart[objIndex]).qty).toString());
                     quantityE.appendChild(bunQuantityN);
                 /*create a p element (subtotal)*/
                 var subtotalE = document.createElement("p");
                 divProperties.appendChild(subtotalE);
                     /*create a note (text)*/
-                    var bunSubtotalN = document.createTextNode("GET subtot VALUE");
+                    var bunSubtotalN = document.createTextNode(((shoppingCart[objIndex]).subtotal).toString());
                     subtotalE.appendChild(bunSubtotalN);
-        var productE = document.getElementById("cart-items-container");
-        productE.appendChild(divProduct);
+        if(document.getElementById("cart-items-container") != null){
+            var productE = document.getElementById("cart-items-container");
+            productE.appendChild(divProduct);
+        }
+
     } /*end for loop*/
-    document.getElementById("total-cost").innerHTML = "$" + orderTotal.toString() +".00";
+    if(document.getElementById("total-cost") != null){
+        document.getElementById("total-cost").innerHTML = "$" + orderTotal.toString() +".00";
+    }
+
 } /*end if*/
 
     /*Deleting Bun from Cart*/
