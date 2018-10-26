@@ -56,13 +56,13 @@
             position: relative;
             display: inline;
             float: right;
-            margin-top: 3;
+            margin-top: 3px;
             margin-bottom: 0;
             margin-right: 5px;
             margin-left: 5px;
             color: black;
             font-family: 'Indie Flower', cursive;
-            font-size: 35;
+            font-size: 35px;
         }
 
     /*Footer*/
@@ -73,7 +73,7 @@
         right: 10px;
         color: black;
         font-family: 'Indie Flower', cursive;
-        font-size: 25;
+        font-size: 25px;
         z-index: 10;
     }
 
@@ -81,32 +81,32 @@
     h2{
         color: white;
         font-family: 'Indie Flower', cursive;
-        font-size: 96;
+        font-size: 96px;
     }
     h3{
         color: black;
         font-family: 'Indie Flower', cursive;
-        font-size: 48;
+        font-size: 48px;
     }
     h4{
         color: black;
         font-family: 'Italiana', serif;
-        font-size: 45;
+        font-size: 45px;
     }
     h5{
         color: black;
         font-family: 'Italiana', serif;
-        font-size: 24;
+        font-size: 24px;
     }
     h6{
         color: black;
         font-family: 'Italiana', serif;
-        font-size: 14.5;
+        font-size: 14.5px;
     }
     p{
         color: black;
         font-family: 'Italiana', serif;
-        font-size: 14;
+        font-size: 14px;
     }
     button{
         color: black;
@@ -144,7 +144,7 @@
             text-align: center;
             color: black;
             font-family: 'Homemade Apple', cursive;
-            font-size: 100;
+            font-size: 100px;
             line-height: 175px;
             margin: 0;
             margin-top: 150px;
@@ -185,7 +185,7 @@
           border-top: 15px solid transparent;
           border-right: 20px solid black;
           border-bottom: 15px solid transparent;
-          margin-left: 475;
+          margin-left: 475px;
           display: inline-block;
         }
         #triangle-right {
@@ -194,7 +194,7 @@
           border-top: 15px solid transparent;
           border-left: 20px solid black;
           border-bottom: 15px solid transparent;
-          margin-right: 10;
+          margin-right: 10px;
           display: inline-block;
         }
 
@@ -213,7 +213,7 @@
         .product-tab-right a{
             color: black;
             font-family: 'Indie Flower', cursive;
-            font-size: 48;
+            font-size: 48px;
             text-decoration: none;
         }
         #triangle-product-tab {
@@ -222,7 +222,7 @@
           border-top: 15px solid transparent;
           border-right: 20px solid black;
           border-bottom: 15px solid transparent;
-          margin-left: 5;
+          margin-left: 5px;
           display: inline-block;
         }
 
@@ -231,11 +231,11 @@
         position: absolute;
         right:0;
         min-height: 713px;
-        width: 1340;
+        width: 1340px;
     }
     .product-tab-left{
         position: relative;
-        left:40;
+        left:40px;
         width: 95px;
         height: 638px;
         padding: 15px;
@@ -286,7 +286,7 @@
     .product-name a{
         color: white;
         font-family: 'Indie Flower', cursive;
-        font-size: 86;
+        font-size: 86px;
         text-decoration: none;
         font-weight: bold;
     }
@@ -395,7 +395,7 @@
                 margin: 0;
                 text-align: left;
                 line-height: 130px;
-                font-size: 70;
+                font-size: 70px;
             }
         .qty-container{
             position: absolute;
@@ -408,7 +408,7 @@
                 margin: 0;
                 margin-bottom: 15px;
                 text-align: left;
-                font-size: 70;
+                font-size: 70px;
                 text-align: center;
             }
             .buttons{
@@ -440,7 +440,7 @@
             }
                 #subtotal{
                     font-family: 'Indie Flower', cursive;
-                    font-size: 45;
+                    font-size: 45px;
                     text-align: center;
                     margin: 0;
                 }
@@ -460,12 +460,12 @@
         #back-to-bun{
             color: black;
             font-family: 'Italiana', serif;
-            font-size: 26;
+            font-size: 26px;
             text-align: center;
         }
         .cart-container h2{
             display: inline-block;
-            font-size: 96;
+            font-size: 96px;
             position: relative;
             left: 400px;
         }
@@ -545,7 +545,7 @@
         float: right;
         display: inline-block;
         font-family: 'Indie Flower', cursive;
-        font-size: 45;
+        font-size: 45px;
         text-align: center;
         border-radius: 10px;
     }
@@ -557,7 +557,7 @@
         margin-left: 2%;
         float: left;
         left: 0%;
-        font-size: 36;
+        font-size: 36px;
         text-align: center;
         line-height: 110%;
         border-radius: 10px;

@@ -17,7 +17,6 @@ function getOrderTotal(shoppingCart){
     for(var i = 0; i < shoppingCart.length; i++){
         total =+ ((shoppingCart[i]).subtotal);
     }
-    console.log("tot: " + total);
     return total;
 }
 
@@ -137,21 +136,24 @@ $(document).ready(function(){
             /*FUTURE IMPROVEMENTS*/
         })
     });
-    console.log("hi?");
+
     /*CART PAGE*/
     /*Display Buns in Cart*/
     /*For Each Bun in the Cart*/
-    for(var i = 0; i < shoppingCart.length; i++){
-        console.log("in the for loop");
+    for(var objIndex = 0; objIndex < shoppingCart.length; objIndex++){
         /*create a div element (product)*/
         var divProduct = document.createElement("div");
         divProduct.setAttribute("class", "product");
+        divProduct.setAttribute("id", objIndex)
             /*create a div element (delete)*/
             var divDelete = document.createElement("div");
             divDelete.setAttribute("class", "delete-button");
+            console.log("divDelete class: " + divDelete.getAttribute("class"));
+            divDelete.setAttribute("index", objIndex)
             divProduct.appendChild(divDelete);
                 /*create a node (delete button)*/
                 var deleteBunN = document.createElement("button");
+                deleteBunN.innerHTML = "Delete from Cart";
                 divDelete.appendChild(deleteBunN);
             /*create a div element (bun)*/
             var divBunImgName = document.createElement("div");
@@ -215,38 +217,27 @@ $(document).ready(function(){
         productE.appendChild(divProduct);
     } /*end for loop*/
 
-/*<div class = "product1"> <!--product 1-->
-                        <button class = "delete">x</button><!--delete button-->
-                        <div class = "name-img"><!--image w/ name overlayed-->
-                            <h1 class = "bun-name"> </h1>
-                            <img class = "bun-img">
-                        </div>
-                        <div class = "order-properties"><!--glaze, qty, subtotal-->
-                            <div class = "glaze">
-                                <p>glaze</p>
-                                <!--dropdown-->
-                                <button class = "bun-prop-btn" id = "glaze-btn"></button>
-                            </div>
-                            <div class = "qty">
-                                <p>quantity</p>
-                                <!--dropdown-->
-                                <button class = "bun-prop-btn" id = "qty-btn"></button>
-                            </div>
-                            <div>
-                                <p>subtotal</p>
-                                <p class = "bun-prop-text" id = "bun-subtot"></p>
-                            </div>
-                        </div>
-                    </div>*/
-
-
-    /*pull info from cart & create divs as necessary??????????*/
     /*Deleting Bun from Cart*/
-    /*$(".delete").click(function(){
-        /*remove bun from cart array*/
+    $(".delete-button").click(function(){
+    /*remove bun from cart array*/
+        /*get cart array*/
+        shoppingCart = JSON.parse(localStorage.getItem("cart"));
+        /*determine object index*/
+        var iDelete = (this).getAttribute("index");
+        console.log("index: " + iDelete);
+        /*delete object from the cart array*/
+        shoppingCart.splice(iDelete, 1);
+        /*save to local storage*/
+        localStorage.setItem("cart", JSON.stringify(shoppingCart));
         /*update numItems*/
+        numItems = shoppingCart.length;
         /*update orderTotal*/
-
+        orderTotal = getOrderTotal(shoppingCart);
+        /*remove object from cart on page*/
+        var cartContainer = document.getElementById("cart-items-container");
+        var objetToDelete = document.getElementById(iDelete.toString());
+        cartContainer.removeChild(objetToDelete);
+    });
     /*Display Order Total*/
 
 
