@@ -4,14 +4,14 @@
         this.bunType = bunType;
         this.price = bunPrice;
         this.glaze = bunGlaze;
-        this.img = "Assets/Images/original-buns.png";
+        this.img = mapImgToGlaze;
         this.qty = bunQty;
         this.subtotal = bunQty*bunPrice;
         this.bunIndex = bunIndex;
     }
 
-/*Map Glaze & Image*/
 
+/*Calculate Order Total*/
 function getOrderTotal(shoppingCart){
     var total = 0;
     for(var i = 0; i < shoppingCart.length; i++){
@@ -19,6 +19,32 @@ function getOrderTotal(shoppingCart){
     }
     localStorage.setItem("orderTot", JSON.stringify(total));
     return total;
+}
+
+/*Map Glaze & Image*/
+function mapImgToGlaze(glazeValue){
+    //map each glaze value to an img src
+    console.log("glazeValue passed in:" + glazeValue);
+    switch(glazeValue.trim()){
+        case "Sugar Milk":
+            var imgSrc = ("src", "Assets/Images/frosted-blackberry-buns.jpg"); //set image
+            console.log("case sugar");
+            break;
+        case "Vanilla Milk":
+            var imgSrc =("src", "Assets/Images/pumpkin-spice-buns.png"); //set image
+            console.log("case vanilla");
+            break;
+        case "Double Chocolate":
+            var imgSrc =("src", "Assets/Images/chocolate-buns.jpg"); //set image
+            console.log("case chocolate");
+            break;
+        default:
+            var imgSrc =("src", "Assets/Images/original-buns.png"); //set image
+            console.log("case orig");
+            break;
+    }
+    //return the img src
+    return imgSrc;
 }
 
 /*on document ready*/
@@ -52,20 +78,8 @@ $(document).ready(function(){
         $(".glaze-button").removeClass("active");
         $(this).addClass("active");
         /*Update Image property*/
-        switch($(this).attr("value")){
-            case "sug-milk":
-                $("#bun-img").attr("src", "Assets/Images/frosted-blackberry-buns.jpg"); //set image
-                break;
-            case "van-milk":
-                $("#bun-img").attr("src", "Assets/Images/pumpkin-spice-buns.png"); //set image
-                break;
-            case "doub-choc":
-                $("#bun-img").attr("src", "Assets/Images/chocolate-buns.jpg"); //set image
-                break;
-            default:
-                $("#bun-img").attr("src", "Assets/Images/original-buns.png"); //set image
-                break;
-        }
+        var glazeButtonElement = $(this).text();
+        $("#bun-img").attr("src", mapImgToGlaze(glazeButtonElement)); //update image on page
     });
 
     /*Quantity Selection - Button Click*/
@@ -142,9 +156,8 @@ $(document).ready(function(){
 
     /*CART PAGE*/
     /*Display Buns in Cart*/
-    /*For Each Bun in the Cart*/
     if(JSON.parse(localStorage.getItem("cart")) != null){ /*shopping cart does exist in local storage*/
-
+    /*For Each Bun in the Cart*/
     for(var objIndex = 0; objIndex < shoppingCart.length; objIndex++){
         /*create a div element (product)*/
         var divProduct = document.createElement("div");
@@ -153,7 +166,6 @@ $(document).ready(function(){
             /*create a div element (delete)*/
             var divDelete = document.createElement("div");
             divDelete.setAttribute("class", "delete-button");
-            console.log("divDelete class: " + divDelete.getAttribute("class"));
             divDelete.setAttribute("index", objIndex)
             divProduct.appendChild(divDelete);
                 /*create a node (delete button)*/
@@ -165,9 +177,10 @@ $(document).ready(function(){
             divBunImgName.setAttribute("class", "which-bun");
             divProduct.appendChild(divBunImgName);
                 /*create a node (image)*/
-                var bunImgN = document.createElement("img");
-                imgSrc = shoppingCart[objIndex].img;
-                bunImgN.src = imgSrc;
+                var bunImgN = document.createElement("img"); //create  image element
+                bunImgN.src = mapImgToGlaze(shoppingCart[objIndex].glaze); //set image element src to the appropriate image
+                console.log("map glaze: " + shoppingCart[objIndex].glaze);
+                console.log("map src: " + mapImgToGlaze(shoppingCart[objIndex].glaze));
                 bunImgN.setAttribute("width", "auto");
                 bunImgN.setAttribute("height", "100px");
                 bunImgN.setAttribute("alt", "BUN IMAGE");
