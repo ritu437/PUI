@@ -42,8 +42,42 @@ function mapImgToGlaze(glazeValue){
     return imgSrc;
 }
 
+
+    /*Map Product Selection to Product Values*/
+function mapSelectionToProperties(typeOfBun){
+    switch(typeOfBun){
+        case "pump-bun":
+            var bunName = "Pumpkin Bun";
+            var bunImg = "Assets/Images/pumpkin-spice-buns.png";
+            break;
+        case "black-bun":
+            var bunName = "Blackberry";
+            var bunImg = "Assets/Images/frosted-blackberry-buns.jpg";
+            break;
+        case "waln-bun":
+            var bunName = "Walnut Bun";
+            var bunImg = "Assets/Images/walnut-buns.jpg";
+            break;
+        case "gf-bun":
+            var bunName = "Gluten Free";
+            var bunImg = "Assets/Images/gluten-free.jpg";
+            break;
+        case "pec-bun":
+            var bunName = "Pecan Bun";
+            var bunImg = "Assets/Images/pecan-buns.jpg";
+            break;
+        default: //original bun
+            var bunName = "The Original";
+            var bunImg = "Assets/Images/original-buns.png";
+            break;
+    }
+    var bunPropArray = [bunName, bunImg];
+    return bunPropArray;
+}
+
 /*on document ready*/
 $(document).ready(function(){
+
     /*Initialize Website Variables*/
     if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
         /*Declare an int variable numItems*/
@@ -67,6 +101,43 @@ $(document).ready(function(){
     $("#num-items-cart").text(numItems + "X");
 
     /*PRODUCT DETAIL PAGE*/
+    /*Load Specific Bun Information Based on Product Page Click)*/
+    /*Determine Which Product is Selected*/
+    var searchParam= window.location.search;
+    var typeOfBun = "orig-bun"; //default to original bun
+    if (searchParam) {
+        if(searchParam.indexOf('pumpkin') !== -1){// pumpkin bun selected
+            typeOfBun = "pump-bun";
+            console.log("pump");
+        }
+        if(searchParam.indexOf('blackberry') !== -1){ // blackberry bun selected
+            typeOfBun = "black-bun";
+            console.log("black");
+        }
+        if(searchParam.indexOf('walnut') !== -1){// walnut bun selected
+            typeOfBun = "waln-bun";
+        }
+        if(searchParam.indexOf('gf') !== -1){ // gluten free bun selected
+            typeOfBun = "gf-bun";
+            console.log("gf");
+        }
+        if(searchParam.indexOf('pecan') !== -1){// pecan bun selected
+            typeOfBun = "pec-bun";
+        }
+    }//end if
+    var bunPropInput = mapSelectionToProperties(typeOfBun);
+    //update image element
+    if(document.getElementById("bun-img") != null){
+        var imgNode = document.createElement("img"); //create  image element
+        imgNode.src = (bunPropInput[1]);
+        document.getElementById("bun-img").appendChild(imgNode);
+    }
+
+    //update text element
+    if(document.getElementById("bun-type") != null){
+        var textNode = document.createTextNode(bunPropInput[0]);
+        document.getElementById("bun-type").appendChild(textNode);
+    }
     /*Glaze Selection - Button Click*/
     $(".glaze-button").click(function(){
         /*Change Button Color*/
