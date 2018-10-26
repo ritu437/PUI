@@ -15,11 +15,9 @@
 function getOrderTotal(shoppingCart){
     var total = 0;
     for(var i = 0; i < shoppingCart.length; i++){
-        console.log("cart item");
-        console.log(shoppingCart[i]);
         total =+ ((shoppingCart[i]).subtotal);
-        console.log((shoppingCart[i]).Subtotal);
     }
+    console.log("tot: " + total);
     return total;
 }
 
@@ -33,8 +31,9 @@ $(document).ready(function(){
         var numItems = 0;
     }
     else{ /*shopping cart exists in local storage*/
+        var shoppingCart = JSON.parse(localStorage.getItem("cart"))
         /*Declare an int variable orderTotal*/
-        var orderTotal = getOrderTotal;
+        var orderTotal = getOrderTotal(shoppingCart);
         /*Declare an int variable numItems*/
         var numItems = shoppingCart.length;
     }
@@ -80,15 +79,12 @@ $(document).ready(function(){
             case "6":
                 var subtot = 6*3;
                 $("#bun-subtotal").text("$" + subtot +".00"); //set name text
-                console.log("6");
                 break;
             case "12":
                 var subtot = 12*3;
                 $("#bun-subtotal").text("$" + subtot +".00"); //set name text
-                console.log("12");
                 break;
             default:
-                console.log("1");
                 var subtot = 1*3;
                 $("#bun-subtotal").text("$" + subtot +".00"); //set name text
                 break;
