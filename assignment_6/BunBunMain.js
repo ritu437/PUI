@@ -141,7 +141,7 @@ $(document).ready(function(){
     /*CART PAGE*/
     /*Display Buns in Cart*/
     /*For Each Bun in the Cart*/
-    for(var i = 0; i < 2; i++){
+    for(var i = 0; i < shoppingCart.length; i++){
         console.log("in the for loop");
         /*create a div element (product)*/
         var divProduct = document.createElement("div");
@@ -160,8 +160,8 @@ $(document).ready(function(){
                 /*create a node (image)*/
                 var bunImgN = document.createElement("img");
                 bunImgN.src = "Assets/Images/original-buns.png";
-                bunImgN.setAttribute("width", "200px");
-                bunImgN.setAttribute("height", "auto");
+                bunImgN.setAttribute("width", "auto");
+                bunImgN.setAttribute("height", "100px");
                 bunImgN.setAttribute("alt", "BUN IMAGE");
                 document.body.appendChild(bunImgN);
                 /*create a node (text)*/
