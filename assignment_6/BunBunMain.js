@@ -229,7 +229,7 @@ $(document).ready(function(){
         var productE = document.getElementById("cart-items-container");
         productE.appendChild(divProduct);
     } /*end for loop*/
-
+    document.getElementById("total-cost").innerHTML = "$" + orderTotal.toString() +".00";
 } /*end if*/
 
     /*Deleting Bun from Cart*/
