@@ -14,13 +14,9 @@
 
 function getOrderTotal(shoppingCart){
     var total = 0;
-    console.log("start of orderTotal function: " + total);
     for(var i = 0; i < shoppingCart.length; i++){
         total = total + ((shoppingCart[i]).subtotal);
-        console.log("loop subtot: " + (shoppingCart[i]).subtotal);
-        console.log("loop of orderTotal function: " + total);
     }
-    console.log("end of orderTotal function: " + total);
     localStorage.setItem("orderTot", JSON.stringify(total));
     return total;
 }
@@ -123,7 +119,6 @@ $(document).ready(function(){
 
                         /*define bun glaze*/
                         var bunGlaze = $(".glaze-button.active").text();
-                        console.log(bunGlaze);
                         /*define bun qty*/
                         var bunQty = $(".qty-button.active").attr("value");
                         /*create bun object*/
@@ -219,13 +214,13 @@ $(document).ready(function(){
                 var quantityE = document.createElement("p");
                 divProperties.appendChild(quantityE);
                     /*create a note (text)*/
-                    var bunQuantityN = document.createTextNode(((shoppingCart[objIndex]).qty).toString());
+                    var bunQuantityN = document.createTextNode(((shoppingCart[objIndex]).qty).toString() + "x");
                     quantityE.appendChild(bunQuantityN);
                 /*create a p element (subtotal)*/
                 var subtotalE = document.createElement("p");
                 divProperties.appendChild(subtotalE);
                     /*create a note (text)*/
-                    var bunSubtotalN = document.createTextNode(((shoppingCart[objIndex]).subtotal).toString());
+                    var bunSubtotalN = document.createTextNode("$" + ((shoppingCart[objIndex]).subtotal).toString() +".00");
                     subtotalE.appendChild(bunSubtotalN);
         if(document.getElementById("cart-items-container") != null){
             var productE = document.getElementById("cart-items-container");
