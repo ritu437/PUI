@@ -248,6 +248,7 @@ $(document).ready(function(){
         localStorage.setItem("cart", JSON.stringify(shoppingCart));
         /*update numItems*/
         numItems = shoppingCart.length;
+        document.getElementById("num-items-cart").innerHTML = numItems + "X";
         /*update orderTotal*/
         orderTotal = getOrderTotal(shoppingCart);
         document.getElementById("total-cost").innerHTML = "$" + orderTotal.toString() +".00";
