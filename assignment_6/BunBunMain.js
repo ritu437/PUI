@@ -108,18 +108,15 @@ $(document).ready(function(){
     if (searchParam) {
         if(searchParam.indexOf('pumpkin') !== -1){// pumpkin bun selected
             typeOfBun = "pump-bun";
-            console.log("pump");
         }
         if(searchParam.indexOf('blackberry') !== -1){ // blackberry bun selected
             typeOfBun = "black-bun";
-            console.log("black");
         }
         if(searchParam.indexOf('walnut') !== -1){// walnut bun selected
             typeOfBun = "waln-bun";
         }
         if(searchParam.indexOf('gf') !== -1){ // gluten free bun selected
             typeOfBun = "gf-bun";
-            console.log("gf");
         }
         if(searchParam.indexOf('pecan') !== -1){// pecan bun selected
             typeOfBun = "pec-bun";
@@ -197,8 +194,10 @@ $(document).ready(function(){
                         var bunGlaze = $(".glaze-button.active").text();
                         /*define bun qty*/
                         var bunQty = $(".qty-button.active").attr("value");
+                        /*define bun type*/
+                        var bunType = (mapSelectionToProperties(typeOfBun))[0];
                         /*create bun object*/
-                        var bun = new Bun("The Original", 3, bunGlaze, bunQty, shoppingCart.length);
+                        var bun = new Bun(bunType, 3, bunGlaze, bunQty, shoppingCart.length);
 
                         /*add bun object to shoppingCart*/
                         shoppingCart[shoppingCart.length] = bun; /*adding new bun object to end of array list*/
@@ -245,13 +244,14 @@ $(document).ready(function(){
                 /*create a node (image)*/
                 var bunImgN = document.createElement("img"); //create  image element
                 bunImgN.src = mapImgToGlaze(shoppingCart[objIndex].glaze); //set image element src to the appropriate image
-                bunImgN.setAttribute("width", "auto");
+                bunImgN.setAttribute("width", "115px");
                 bunImgN.setAttribute("height", "100px");
                 bunImgN.setAttribute("alt", "BUN IMAGE");
-                document.body.appendChild(bunImgN);
-                /*create a node (text)*/
-                var bunNameN = document.createTextNode("name");
                 divBunImgName.appendChild(bunImgN);
+                /*create a node (text)*/
+                var bunNameE = document.createElement("p");
+                var bunNameN = document.createTextNode(shoppingCart[objIndex].bunType);
+                divBunImgName.appendChild(bunNameN);
             /*create a div element (property texts)*/
             var divText = document.createElement("div");
             divText.setAttribute("class", "property-text");
