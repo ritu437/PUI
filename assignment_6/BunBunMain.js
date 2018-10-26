@@ -37,6 +37,7 @@ $(document).ready(function(){
         /*Declare an int variable numItems*/
         var numItems = shoppingCart.length;
     }
+    $("#num-items-cart").text(numItems + "X");
 
     /*PRODUCT DETAIL PAGE*/
     /*Glaze Selection - Button Click*/
@@ -126,7 +127,7 @@ $(document).ready(function(){
                         numItems = shoppingCart.length;
                         /*update orderTotal*/
                         orderTotal = getOrderTotal(shoppingCart);
-                        $("#num-items-cart").text(orderTotal);
+                        $("#num-items-cart").text(numItems + "X");
                     }
                     /*qty has not been selected - provide feedback - change color of qty text?*/
                     /*FUTURE IMPROVEMENTS*/

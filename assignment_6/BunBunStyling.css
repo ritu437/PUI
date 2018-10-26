@@ -455,6 +455,8 @@
         width: 993px;
         height: 670px;
         background-color: rgba(136, 136, 119, 0.7);
+        position: relative;
+        left: 232px;
     }
         #back-to-bun{
             color: black;
@@ -465,8 +467,48 @@
         .cart-container h2{
             display: inline-block;
             font-size: 96;
+            position: relative;
+            left: 400px;
         }
+        .cart-items-container{
+            display: inline-block;
+            position: relative;
+            width: 95%;
+            height:300px;
+            margin: 10px;
+            margin-left:25px;
+        }
+        .finish-order-container{
+            display: inline-block;
+            position: relative;
+            width: 95%;
+            height:190px;
+            margin: 10px;
+            margin-left:25px;
+        }
+        .order-total{
+            display: inline-block;
+            position: relative;
+            width: 50%;
+            height:175px;
+            margin: 10px;
+            margin-left:25px;
+        }
+            .order-total h4{
+                text-align: center;
+            }
 
+        .pay{
+            display: inline-block;
+            position: relative;
+            width: 25%;
+            height: 50%;
+            margin: 10px;
+            margin-left:120px;
+            margin-top: 35px;
+            font-size: 50px;
+            vertical-align: top;
+        }
 
     /* Format Large Buttons Text */
     .large-buttons{
