@@ -1,12 +1,12 @@
 
 /*Constructor for Buns*/
-    function Bun(bunType, bunPrice, bunIndex){
+    function Bun(bunType, bunPrice, bunGlaze, bunQty, bunIndex){
         this.type = bunType;
         this.price = bunPrice;
-        this.glaze = "None";
+        this.glaze = bunGlaze;
         this.img = "Assets/Images/original-buns.png";
-        this.qty = 0;
-        this.subtotal = (this.qty)*bunPrice;
+        this.qty = bunQty;
+        this.subtotal = bunQty*bunPrice;
         this.index = bunIndex;
     }
 
@@ -16,7 +16,10 @@ var glazeImgMap = {""};*/
 function getOrderTotal(shoppingCart){
     var total = 0;
     for(var i = 0; i < shoppingCart.length; i++){
-        total += shoppingCart[i].subtotal;
+        console.log("cart item");
+        console.log(shoppingCart[i]);
+        total =+ ((shoppingCart[i]).subtotal);
+        console.log((shoppingCart[i]).subtotal);
     }
     return total;
 }
@@ -87,36 +90,62 @@ $(document).ready(function(){
 
     /*Adding Bun to Cart*/
     $(".cart-add-button").click(function(){
-        /*Check if shopping cart array exists in local storage*/
-        if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
-            /*Declare an array variable shoppingCart*/
-            var shoppingCart = [];
-            console.log("no cart");
-        }
-        else{ /*shopping cart exists in local storage*/
-            /*get shoppingCart saved in local storage*/
-            shoppingCart = JSON.parse(localStorage.getItem("cart"));
-            console.log("cart exists");
-        }
-        /*update numItems*/
-        numItems = shoppingCart.length;
-        console.log(numItems);
-        /*create bun object*/
-        var bun = new Bun("The Original", 3, numItems)
-        console.log("new bun");
-        /*add bun object to shoppingCart*/
-        shoppingCart[numItems] = bun; /*adding new bun object to end of array list*/
-        /*Save shoppingCart to local storage*/
-        localStorage.setItem("cart", JSON.stringify(shoppingCart));
-        console.log("set cart");
-        /*update orderTotal*/
-        orderTotal = getOrderTotal(shoppingCart);
-        console.log(orderTotal);
+        /*Check if Glaze has been selected*/
+
+        $(".glaze-button").each(function(){
+            if($(this).hasClass("active")){ /*If yes*/
+                /*Check if QTY has been selected*/
+                $(".qty-button").each(function(){
+                    if($(this).hasClass("active")){ /*If yes*/
+                        /*Check if shopping cart array exists in local storage*/
+                        if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
+                            /*Declare an array variable shoppingCart*/
+                            var shoppingCart = [];
+                            console.log("no cart");
+                            console.log(shoppingCart.length);
+                        }
+                        else{ /*shopping cart exists in local storage*/
+                            /*get shoppingCart saved in local storage*/
+                            shoppingCart = JSON.parse(localStorage.getItem("cart"));
+                            console.log("cart exists");
+                            console.log(shoppingCart.length);
+                        }
+                        /*update numItems*/
+                        numItems = shoppingCart.length+1;
+                        console.log("num items: " + numItems);
+                        /*define bun glaze*/
+                        var bunGlaze = $(".glaze-button.active").attr("value");
+                        /*define bun qty*/
+                        var bunQty = $(".qty-button.active").attr("value");
+                        console.log("bun qty: " + bunQty);
+                        /*create bun object*/
+                        var bun = new Bun("The Original", 3, bunGlaze, bunQty, numItems-1);
+                        console.log("new bun");
+
+                        /*add bun object to shoppingCart*/
+                        shoppingCart[shoppingCart.length] = bun; /*adding new bun object to end of array list*/
+                        /*Save shoppingCart to local storage*/
+                        localStorage.setItem("cart", JSON.stringify(shoppingCart));
+                        console.log("set cart");
+                        /*update orderTotal*/
+                        orderTotal = getOrderTotal(shoppingCart);
+                        console.log("order tot: " + orderTotal);
+                        $("#num-items-cart").text(orderTotal);
+                    }
+                    /*qty has not been selected - provide feedback - change color of qty text?*/
+                })
+            }
+            /*glaze has not been selected- provide feedback - change color of glaze text?*/
+        })
+    });
+
+
     });
 
 
     /*CART PAGE*/
     /*Deleting Bun from Cart*/
+    /*$(".delete").click(function(){
         /*remove bun from cart array*/
         /*update numItems*/
         /*update orderTotal*/
@@ -125,4 +154,3 @@ $(document).ready(function(){
         /*pull info from cart & create divs as necessary??????????*/
 
     /*Display Order Total*/
-})
