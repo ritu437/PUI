@@ -24,23 +24,18 @@ function getOrderTotal(shoppingCart){
 /*Map Glaze & Image*/
 function mapImgToGlaze(glazeValue){
     //map each glaze value to an img src
-    console.log("glazeValue passed in:" + glazeValue);
     switch(glazeValue.trim()){
         case "Sugar Milk":
             var imgSrc = ("src", "Assets/Images/frosted-blackberry-buns.jpg"); //set image
-            console.log("case sugar");
             break;
         case "Vanilla Milk":
             var imgSrc =("src", "Assets/Images/pumpkin-spice-buns.png"); //set image
-            console.log("case vanilla");
             break;
         case "Double Chocolate":
             var imgSrc =("src", "Assets/Images/chocolate-buns.jpg"); //set image
-            console.log("case chocolate");
             break;
         default:
             var imgSrc =("src", "Assets/Images/original-buns.png"); //set image
-            console.log("case orig");
             break;
     }
     //return the img src
@@ -179,8 +174,6 @@ $(document).ready(function(){
                 /*create a node (image)*/
                 var bunImgN = document.createElement("img"); //create  image element
                 bunImgN.src = mapImgToGlaze(shoppingCart[objIndex].glaze); //set image element src to the appropriate image
-                console.log("map glaze: " + shoppingCart[objIndex].glaze);
-                console.log("map src: " + mapImgToGlaze(shoppingCart[objIndex].glaze));
                 bunImgN.setAttribute("width", "auto");
                 bunImgN.setAttribute("height", "100px");
                 bunImgN.setAttribute("alt", "BUN IMAGE");
