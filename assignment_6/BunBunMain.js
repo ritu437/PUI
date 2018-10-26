@@ -144,6 +144,27 @@ $(document).ready(function(){
 
     /*CART PAGE*/
     /*Display Buns in Cart*/
+    /*For Each Bun in the Cart*/
+        /*create a div element (product)*/
+            /*create a div element (delete)*/
+                /*create a node (delete button)*/
+            /*create a div element (bun)*/
+                /*create a node (image)*/
+                /*create a node (text)*/
+            /*create a div element (property texts)*/
+                /*create a p element (glaze)*/
+                    /*create a note (text)*/
+                /*create a p element (quantity)*/
+                    /*create a note (text)*/
+                /*create a p element (subtotal)*/
+                    /*create a note (text)*/
+            /*create a div element (bun properties)*/
+                /*create a p element (glaze)*/
+                    /*create a note (text)*/
+                /*create a p element (quantity)*/
+                    /*create a note (text)*/
+                /*create a p element (subtotal)*/
+                    /*create a note (text)*/
 
 
 
