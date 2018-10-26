@@ -248,6 +248,7 @@ $(document).ready(function(){
         numItems = shoppingCart.length;
         /*update orderTotal*/
         orderTotal = getOrderTotal(shoppingCart);
+        document.getElementById("total-cost").innerHTML = "$" + orderTotal.toString() +".00";
         /*remove object from cart on page*/
         var cartContainer = document.getElementById("cart-items-container");
         var objetToDelete = document.getElementById(iDelete.toString());
