@@ -13,11 +13,15 @@
 /*Map Glaze & Image*/
 
 function getOrderTotal(shoppingCart){
-    var total = localStorage.getItem("orderTot");
+    var total = 0;
+    console.log("start of orderTotal function: " + total);
     for(var i = 0; i < shoppingCart.length; i++){
-        total =+ ((shoppingCart[i]).subtotal);
+        total = total + ((shoppingCart[i]).subtotal);
+        console.log("loop subtot: " + (shoppingCart[i]).subtotal);
+        console.log("loop of orderTotal function: " + total);
     }
-    document.getElementById("total-cost").innerHTML = "$" + total.toString() +".00";
+    console.log("end of orderTotal function: " + total);
+    localStorage.setItem("orderTot", JSON.stringify(total));
     return total;
 }
 
@@ -132,7 +136,7 @@ $(document).ready(function(){
                         /*update numItems*/
                         numItems = shoppingCart.length;
                         /*update orderTotal*/
-                        orderTotal = getOrderTotal(shoppingCart, orderTotal);
+                        orderTotal = getOrderTotal(shoppingCart);
                         $("#num-items-cart").text(numItems + "X");
                     }
                     /*qty has not been selected - provide feedback - change color of qty text?*/
@@ -147,7 +151,7 @@ $(document).ready(function(){
     /*CART PAGE*/
     /*Display Buns in Cart*/
     /*For Each Bun in the Cart*/
-    if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
+    if(JSON.parse(localStorage.getItem("cart")) != null){ /*shopping cart does exist in local storage*/
 
     for(var objIndex = 0; objIndex < shoppingCart.length; objIndex++){
         /*create a div element (product)*/
@@ -225,6 +229,7 @@ $(document).ready(function(){
         var productE = document.getElementById("cart-items-container");
         productE.appendChild(divProduct);
     } /*end for loop*/
+
 } /*end if*/
 
     /*Deleting Bun from Cart*/
