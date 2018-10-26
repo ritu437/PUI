@@ -122,7 +122,8 @@ $(document).ready(function(){
             typeOfBun = "pec-bun";
         }
     }//end if
-    var bunPropInput = mapSelectionToProperties(typeOfBun);
+    var bunPropInput = mapSelectionToProperties(typeOfBun); //array of bun name and image
+
     //update image element
     if(document.getElementById("bun-img") != null){
         var imgNode = document.createElement("img"); //create  image element
@@ -142,7 +143,13 @@ $(document).ready(function(){
         $(this).addClass("active");
         /*Update Image property*/
         var glazeButtonElement = $(this).text();
-        $("#bun-img").attr("src", mapImgToGlaze(glazeButtonElement)); //update image on page
+        if(document.getElementById("bun-img") != null){
+            var imgNode = document.createElement("img"); //create  image element
+            imgNode.src = mapImgToGlaze(glazeButtonElement);
+            // Get the first child node of an <ul> element
+            var origImage = document.getElementById("bun-img").childNodes[0];
+            document.getElementById("bun-img").replaceChild(imgNode, origImage);
+        }
     });
 
     /*Quantity Selection - Button Click*/
