@@ -13,10 +13,11 @@
 /*Map Glaze & Image*/
 
 function getOrderTotal(shoppingCart){
-    var total = 0;
+    var total = localStorage.getItem("orderTot");
     for(var i = 0; i < shoppingCart.length; i++){
         total =+ ((shoppingCart[i]).subtotal);
     }
+    document.getElementById("total-cost").innerHTML = "$" + total.toString() +".00";
     return total;
 }
 
@@ -24,15 +25,21 @@ function getOrderTotal(shoppingCart){
 $(document).ready(function(){
     /*Initialize Website Variables*/
     if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
-        /*Declare an int variable orderTotal*/
-        var orderTotal = 0;
         /*Declare an int variable numItems*/
         var numItems = 0;
+        /*Declare an int variable orderTotal & save to local storage*/
+        var orderTotal = 0;
+        localStorage.setItem("orderTot", JSON.stringify(orderTotal));
     }
     else{ /*shopping cart exists in local storage*/
         var shoppingCart = JSON.parse(localStorage.getItem("cart"))
-        /*Declare an int variable orderTotal*/
-        var orderTotal = getOrderTotal(shoppingCart);
+        /*Get orderTotal*/
+        if(JSON.parse(localStorage.getItem("orderTot")) != null){ /*orderTot does exist in local storage*/
+            var orderTotal = localStorage.getItem("orderTot");
+        }
+        else{
+            var orderTotal = 0;
+        }
         /*Declare an int variable numItems*/
         var numItems = shoppingCart.length;
     }
@@ -125,7 +132,7 @@ $(document).ready(function(){
                         /*update numItems*/
                         numItems = shoppingCart.length;
                         /*update orderTotal*/
-                        orderTotal = getOrderTotal(shoppingCart);
+                        orderTotal = getOrderTotal(shoppingCart, orderTotal);
                         $("#num-items-cart").text(numItems + "X");
                     }
                     /*qty has not been selected - provide feedback - change color of qty text?*/
@@ -140,6 +147,8 @@ $(document).ready(function(){
     /*CART PAGE*/
     /*Display Buns in Cart*/
     /*For Each Bun in the Cart*/
+    if(JSON.parse(localStorage.getItem("cart")) == null){ /*shopping cart does not exist in local storage*/
+
     for(var objIndex = 0; objIndex < shoppingCart.length; objIndex++){
         /*create a div element (product)*/
         var divProduct = document.createElement("div");
@@ -216,6 +225,7 @@ $(document).ready(function(){
         var productE = document.getElementById("cart-items-container");
         productE.appendChild(divProduct);
     } /*end for loop*/
+} /*end if*/
 
     /*Deleting Bun from Cart*/
     $(".delete-button").click(function(){

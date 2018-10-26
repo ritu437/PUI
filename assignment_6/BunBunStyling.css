@@ -462,12 +462,19 @@
             font-family: 'Italiana', serif;
             font-size: 26px;
             text-align: center;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 25px;
         }
         .cart-container h2{
             display: inline-block;
             font-size: 96px;
             position: relative;
-            left: 400px;
+            left: 150px;
+            margin: 0;
+            margin-top: 50px;
+            vertical-align: bottom;
+            line-height: 75%
         }
         #cart-items-container{
             display: inline-block;
@@ -515,6 +522,7 @@
             height:190px;
             margin: 10px;
             margin-left:25px;
+            margin-top: 0;
         }
         .order-total{
             display: inline-block;
@@ -526,6 +534,8 @@
         }
             .order-total h4{
                 text-align: center;
+                margin: 10px;
+                margin-top: 0;
             }
 
         .pay{
