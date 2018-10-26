@@ -478,6 +478,24 @@
             margin: 10px;
             margin-left:25px;
         }
+            .cart-items-container div{
+                display: inline-block;
+                position: relative;
+                height:100px;
+                margin: 5px;
+            }
+            .delete-button{
+                width: 50px;
+            }
+            .which-bun{
+                width: 150px;
+            }
+            .property-text{
+                width: 100px;
+            }
+            .bun-properties{
+                width: 200px;
+            }
         .finish-order-container{
             display: inline-block;
             position: relative;

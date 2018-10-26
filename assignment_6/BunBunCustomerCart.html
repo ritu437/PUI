@@ -56,30 +56,12 @@
                 <a href="BunBunProductPage.html"><button id = "back-to-bun">Back to Buns!</button></a>
                 <h2>Your Cart</h2><!--Section Title-->
                 <hr size = "15", color = "rgba(138, 79, 125, 0.3)", align = "right", width = "98%">
-                <div class = "cart-items-container"><!--product items information-->
-                    <div class = "product1"> <!--product 1-->
-                        <button class = "delete">x</button><!--delete button-->
-                        <div class = "name-img"><!--image w/ name overlayed-->
-                            <h1 class = "bun-name"> </h1>
-                            <img class = "bun-img">
-                        </div>
-                        <div class = "order-properties"><!--glaze, qty, subtotal-->
-                            <div class = "glaze">
-                                <p>glaze</p>
-                                <!--dropdown-->
-                                <button class = "bun-prop-btn" id = "glaze-btn"></button>
-                            </div>
-                            <div class = "qty">
-                                <p>quantity</p>
-                                <!--dropdown-->
-                                <button class = "bun-prop-btn" id = "qty-btn"></button>
-                            </div>
-                            <div>
-                                <p>subtotal</p>
-                                <p class = "bun-prop-text" id = "bun-subtot"></p>
-                            </div>
-                        </div>
-                    </div>
+                <!--product items information-->
+                <div class = "cart-items-container"> <!--dynamically filled from JS -->
+                    <div class = "delete-button"></div>
+                    <div class = "which-bun"></div>
+                    <div class = "property-text"></div>
+                    <div class = "bun-properties"></div>
                 </div>
                 <hr size = "15", color = "rgba(138, 79, 125, 0.3)", align = "right", width = "98%", noshade>
                 <div class = "finish-order-container">

@@ -139,17 +139,46 @@ $(document).ready(function(){
     });
 
 
-    });
+
 
 
     /*CART PAGE*/
+    /*Display Buns in Cart*/
+
+
+
+/*<div class = "product1"> <!--product 1-->
+                        <button class = "delete">x</button><!--delete button-->
+                        <div class = "name-img"><!--image w/ name overlayed-->
+                            <h1 class = "bun-name"> </h1>
+                            <img class = "bun-img">
+                        </div>
+                        <div class = "order-properties"><!--glaze, qty, subtotal-->
+                            <div class = "glaze">
+                                <p>glaze</p>
+                                <!--dropdown-->
+                                <button class = "bun-prop-btn" id = "glaze-btn"></button>
+                            </div>
+                            <div class = "qty">
+                                <p>quantity</p>
+                                <!--dropdown-->
+                                <button class = "bun-prop-btn" id = "qty-btn"></button>
+                            </div>
+                            <div>
+                                <p>subtotal</p>
+                                <p class = "bun-prop-text" id = "bun-subtot"></p>
+                            </div>
+                        </div>
+                    </div>*/
+
+
+    /*pull info from cart & create divs as necessary??????????*/
     /*Deleting Bun from Cart*/
     /*$(".delete").click(function(){
         /*remove bun from cart array*/
         /*update numItems*/
         /*update orderTotal*/
 
-    /*Display Buns in Cart*/
-        /*pull info from cart & create divs as necessary??????????*/
-
     /*Display Order Total*/
+
+    }); /*end doc on ready function*/
