@@ -207,6 +207,7 @@ $(document).ready(function(){
                         var bunType = (mapSelectionToProperties(typeOfBun))[0];
                         /*create bun object*/
                         var bun = new Bun(bunType, 3, bunGlaze, bunQty, shoppingCart.length);
+                        bun.uid = 'bun_' + Math.floor(Math.random() * 10e6);
 
                         /*add bun object to shoppingCart*/
                         shoppingCart[shoppingCart.length] = bun; /*adding new bun object to end of array list*/
@@ -240,7 +241,9 @@ $(document).ready(function(){
             /*create a div element (delete)*/
             var divDelete = document.createElement("div");
             divDelete.setAttribute("class", "delete-button");
-            divDelete.setAttribute("index", objIndex)
+            divDelete.setAttribute("index", objIndex);
+             divDelete.setAttribute("uid", shoppingCart[objIndex].uid);
+
             divProduct.appendChild(divDelete);
                 /*create a node (delete button)*/
                 var deleteBunN = document.createElement("button");
@@ -321,12 +324,14 @@ $(document).ready(function(){
     $(".delete-button").click(function(){
     /*remove bun from cart array*/
         /*get cart array*/
+
         shoppingCart = JSON.parse(localStorage.getItem("cart"));
         /*determine object index*/
         var iDelete = (this).getAttribute("index");
-        console.log("index: " + iDelete);
+        var uid = (this).getAttribute('uid');
         /*delete object from the cart array*/
-        shoppingCart.splice(iDelete, 1);
+        // shoppingCart.splice(iDelete, 1);
+        shoppingCart = shoppingCart.filter(x => x.uid !== uid);
         /*save to local storage*/
         localStorage.setItem("cart", JSON.stringify(shoppingCart));
         /*update numItems*/
