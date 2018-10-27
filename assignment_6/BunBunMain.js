@@ -99,7 +99,7 @@ $(document).ready(function(){
         var numItems = shoppingCart.length;
     }
     $("#num-items-cart").text(numItems + "X");
-    console.log("numItems: " + numItems);
+
 
 
     /*PRODUCT DETAIL PAGE*/
