@@ -37,12 +37,10 @@ $(document).ready(function(){
     updateProductDetail(2);
 
     // TODO: (Step 8): add code below for changing product details on click
-    var productImg = document.getElementById(0);
-    productImg.onclick = function(){
-        updateProductDetail(0);
-    }
-
-
+    $(".product-selection").click(function(){
+        var id = $(this).attr("id");
+        updateProductDetail(id);
+    });
 });
 
 // TODO (Step 6): fill in function for updating detail-template based on id
@@ -52,7 +50,7 @@ function updateProductDetail(id) {
     // compile the template into a function
     var template = Handlebars.compile(source);
     // create new HTML using our data
-    var newHTML = template(products["cinnamonBuns"][id]);
+    var newHTML = template(products.cinnamonBuns[id]);
     // add the new HTML to the page
-    $("#product-detail-container").append(newHTML);
+    $("#product-detail-container").html(newHTML);
 }
