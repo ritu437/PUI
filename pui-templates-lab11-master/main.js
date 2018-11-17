@@ -37,6 +37,10 @@ $(document).ready(function(){
     updateProductDetail(2);
 
     // TODO: (Step 8): add code below for changing product details on click
+    var productImg = document.getElementById(0);
+    productImg.onclick = function(){
+        updateProductDetail(0);
+    }
 
 
 });
