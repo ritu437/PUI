@@ -1,9 +1,47 @@
 
-.header-section{
+/*.header-section{
     background-color: orange;
+}
+
+#header-consent{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 140px;
+}
+#header-for{
+    font-family: 'Marck Script', cursive;
+    font-size: 75px;
+}
+#header-kids{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 140px;
 }
 
 .resource-link{
     color: #009bff;
     width: 100%;
+}*/
+
+.header{
+    width:100%;
 }
+
+.sub-header{
+    width: 100%;
+}
+
+#header-consent{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 140px;
+}
+#header-for{
+    font-family: 'Marck Script', cursive;
+    font-size: 75px;
+}
+#header-kids{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 140px;
+}
+
+.resource-link{
+    color: #009bff;
+    width: 100%;
