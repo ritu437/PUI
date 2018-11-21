@@ -1,0 +1,17 @@
+.header-section{
+    background-color: orange;
+}
+
+.nav-link{
+
+}
+
+.row{
+    justify-content: center;
+}
+
+.animation{
+    background-color: grey;
+    width: 100%;
+    height: 300px;
+}
