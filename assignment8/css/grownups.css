@@ -22,26 +22,38 @@
 }*/
 
 .header{
-    width:100%;
+
 }
 
 .sub-header{
-    width: 100%;
+    text-align: center;
 }
 
 #header-consent{
+    margin-left:10%;
+    margin-right: 10px;
     font-family: 'Cabin Sketch', cursive;
-    font-size: 140px;
+    font-size: 400%;
 }
 #header-for{
+    margin-left:10px;
+    margin-right: 10px;
     font-family: 'Marck Script', cursive;
-    font-size: 75px;
+    font-size: 300%;
 }
 #header-kids{
+    margin-left:10px;
+    margin-right: 10px;
     font-family: 'Nothing You Could Do', cursive;
-    font-size: 140px;
+    font-size: 400%;
 }
 
-.resource-link{
+.nav-links{
+    text-align: center;
+}
+.info-links{
     color: #009bff;
-    width: 100%;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 24px;
+}
