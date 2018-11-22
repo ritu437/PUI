@@ -1,14 +1,35 @@
 
-.header-section{
+.sub-header{
     background-color: orange;
 }
-
-.nav-link{
-
+#home-icon{
+    justify-content: right;
 }
-
-.main-body{
+#header-consent{
+    margin-right: 10px;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 400%;
+}
+#header-for{
+    margin-left:10px;
+    margin-right: 10px;
+    font-family: 'Marck Script', cursive;
+    font-size: 200%;
+}
+#header-kids{
+    margin-left:10px;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 400%;
     justify-content: center;
+}
+.info-links{
+    color: #009bff;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 24px;
+}
+.main-body{
+    margin-top: 50px;
 }
 
 .module-img{
