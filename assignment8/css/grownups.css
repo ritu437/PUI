@@ -1,4 +1,7 @@
 
+.navbar{
+    background-color: orange;
+}
 #header-consent{
     margin-left:10%;
     margin-right: 10px;
@@ -16,15 +19,13 @@
     margin-right: 10px;
     font-family: 'Nothing You Could Do', cursive;
     font-size: 400%;
+    justify-content: center;
 }
 
 .sub-header{
-        margin-top: 100px;
     margin-bottom: 20px;
 }
-.nav-links{
-    text-align: center;
-}
+
 .info-links{
     color: #009bff;
     font-family: 'Amatic SC', cursive;
