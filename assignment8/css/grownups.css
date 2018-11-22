@@ -18,10 +18,12 @@
     font-size: 400%;
 }
 
+.sub-header{
+        margin-top: 100px;
+    margin-bottom: 20px;
+}
 .nav-links{
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 20px;
 }
 .info-links{
     color: #009bff;
@@ -29,19 +31,26 @@
     font-weight: bold;
     font-size: 24px;
 }
-.info-links{
-    color: #009bff;
+#home-icon{
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
+.resource-link{
+    margin-left: 10px;
+}
 h1{
     font-family: 'Nunito', sans-serif;
     font-size: 34px;
+    margin-left: 10px;
 }
 h2{
     font-family: 'Nunito', sans-serif;
     font-size: 24px;
+    margin-left: 10px;
 }
 p{
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
+    margin-left: 10px;
 }
