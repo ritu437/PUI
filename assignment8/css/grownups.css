@@ -34,6 +34,12 @@
     font-weight: bold;
     font-size: 32px;
 }
+@media (max-width: 360px){
+    .sub-header{
+        color: red;
+        display: none;
+    }
+}
 
 .main-body{
     margin-top: 50px;

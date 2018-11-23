@@ -3,7 +3,7 @@
     background-color: orange;
 }
 #home-icon{
-    justify-content: right;
+    width: 3vw;
 }
 #header-consent{
     font-family: 'Cabin Sketch', cursive;
@@ -34,6 +34,14 @@
     font-weight: bold;
     font-size: 24px;
 }
+
+@media (max-width: 360px){
+    .sub-header{
+        font-size: 14px;
+        /*display: none;*/
+    }
+}
+
 .main-body{
     margin-top: 50px;
 }
