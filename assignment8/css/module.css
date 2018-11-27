@@ -1,23 +1,30 @@
+body{
+    background-color: #F7EFE2;
+}
 .sub-header{
-    background-color: orange;
+    background-color: #F9A603;
 }
 #home-icon{
-    justify-content: right;
+    width: 3vw;
+    color: #009bff;
 }
 #header-consent{
     font-family: 'Cabin Sketch', cursive;
     font-size: 10vw;
+    color: #B3C100;
 }
 #header-for{
     margin-left:7px;
     margin-right: 10px;
     font-family: 'Marck Script', cursive;
-    font-size: 5vw;
+    font-size: 4vw;
+    color: #000;
 }
 #header-kids{
     font-family: 'Nothing You Could Do', cursive;
     font-size: 7vw;
     justify-content: center;
+    color: #F25C00;
 }
 @media (min-width: 1200px){
     #header-consent{
@@ -31,7 +38,11 @@
     color: #009bff;
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 34px;
+}
+
+.info-links a{
+    color: #000;
 }
 
 .main-body{
