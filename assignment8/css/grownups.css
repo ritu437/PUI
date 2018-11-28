@@ -46,10 +46,16 @@ body{
     color: #000;
 }
 
-@media (max-width: 360px){
-    .sub-header{
-        color: red;
+@media (max-width: 415px){ /*small screen*/
+    /*.sub-header{
         display: none;
+    }*/
+    .info-links{
+        font-size: 22px;
+    }
+    #two-happy{
+        display: block;
+        margin: 0 auto;
     }
 }
 
@@ -70,6 +76,10 @@ body{
     justify-content: right;
 }
 
+#two-happy{
+    height: 125px;
+    width: auto;
+}
 
 h1{
     font-family: 'Nunito', sans-serif;
