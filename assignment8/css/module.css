@@ -45,6 +45,11 @@ body{
     color: #000;
 }
 
+.nav-border{
+    height: 25px;
+    width:100%;
+    background-color: #F9A603;
+}
 .main-body{
     margin-top: 50px;
 }
