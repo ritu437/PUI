@@ -2,26 +2,20 @@
 /*on document ready*/
 $(document).ready(function(){
     console.log("ready");
-/*    $(".module-img img").click(function(){
-        var imgSrc = $(this).attr("id");
-        console.log("img " + imgSrc);
-        var gifSrc = $(this).attr("gif-src");
-        console.log("gif " + gifSrc);
-    });*/
 
-    $(".module-img img").hover(function(){
-        var curSrc = $(this).attr("src");
-        console.log("current src: " +curSrc);
-        var imgSrc = $(this).attr("id");
-        console.log("img " + imgSrc);
-        var gifSrc = $(this).attr("gif-src");
-        console.log("gif " + gifSrc);
-        $(this).attr("src", gifSrc);
-        var newSrc = $(this).attr("src");
-        console.log("new src: " +newSrc);
-    }, function(){
-
-    });
+    /*img on home page changes to gif on hover*/
+    $(".module-img img").hover(
+        /*When hover over a module image change to gif*/
+        function(){
+            var gifSrc = $(this).attr("gif-src"); //get src of gif
+            $(this).attr("src", gifSrc); //set src to gif src
+        },
+        /*When hover off a module image change back to static img*/
+        function(){
+            var imgSrc = $(this).attr("img-src");
+            $(this).attr("src", imgSrc);
+        }
+    );
 
 
 });
