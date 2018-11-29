@@ -47,17 +47,11 @@ body{
 }
 
 @media (max-width: 415px){ /*small screen*/
-    /*.sub-header{
-        display: none;
-    }*/
     .info-links{
         font-size: 22px;
     }
-    #two-happy{
-        display: block;
-        margin: 0 auto;
-    }
 }
+
 
 .main-body{
     margin-top: 50px;
@@ -79,6 +73,16 @@ body{
 #two-happy{
     height: 125px;
     width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#parent-child{
+    height: auto;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 h1{
