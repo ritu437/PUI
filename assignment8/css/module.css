@@ -1,7 +1,7 @@
 body{
     background-color: #F7EFE2;
 }
-body > .container-fluid {
+.container-fluid {
     overflow-x: hidden;
 }
 .sub-header{
@@ -18,7 +18,6 @@ body > .container-fluid {
   }
 }
 
-}
 #header-consent{
     font-family: 'Cabin Sketch', cursive;
     font-size: 10vw;
