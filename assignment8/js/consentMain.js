@@ -17,6 +17,13 @@ $(document).ready(function(){
         }
     );
 
-    $("")
+    /*Neutral img changes to appropriate img based on Yes or No button click*/
+    $(".act button").click(
+        function(){
+            var newSrc = $(this).attr("newSrc"); //get src of new img
+            $(".act img").attr("src", newSrc); //set src to new src
+        }
+    );
 
 });
+
