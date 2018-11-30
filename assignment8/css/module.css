@@ -1,6 +1,9 @@
 body{
     background-color: #F7EFE2;
 }
+body > .container-fluid {
+    overflow-x: hidden;
+}
 .sub-header{
     background-color: #F9A603;
 }
@@ -77,3 +80,61 @@ button{
     font-family: 'Nothing You Could Do', cursive;
     font-size: 50px;
 }
+
+.marsh-row {
+    margin: 60px 0;
+}
+.marshamallow-holder {
+    width: 50vh;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+}
+
+.marshmallow-outline {
+    stroke-width: 1;
+    stroke-dasharray: 5;
+    stroke-dashoffset: 5;
+    animation: dash 2s linear forwards infinite;
+}
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 20;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  .danger-symbol {
+      animation: appear-disappear 2s linear forwards infinite;
+  }
+
+  @keyframes appear-disappear {
+    0% {
+      opacity: 0;
+    }
+    50% {
+        opacity: 1;
+      }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  .marsh-two-arm {
+      transform-origin: 112.5px;
+      animation: arm-move 2s linear forwards infinite;
+  }
+
+  @keyframes arm-move {
+    0% {
+      transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(90deg);
+      }
+    100% {
+        transform: rotateZ(0deg);
+    }
+  }

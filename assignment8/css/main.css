@@ -2,6 +2,9 @@
 body{
     background-color: #F7EFE2;
 }
+body > .container-fluid {
+    overflow-x: hidden;
+}
 .sub-header{
     background-color: #F9A603;
 }
