@@ -171,6 +171,22 @@ button{
     }
   }
 
+  .permission{
+      animation: color-change 5s linear forwards infinite;
+  }
+
+  @keyframes color-change {
+    20% {
+      stroke: #F25C00;
+    }
+    50% {
+      stroke: #F9A603
+    }
+    80% {
+      stroke: #F25C00;
+    }
+  }
+
   #ylw-str {
     transform-origin: 95px;
     animation: str-rotate 20s linear forwards infinite;
