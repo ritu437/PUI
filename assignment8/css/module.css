@@ -139,7 +139,7 @@ button{
 
   .marsh-two-arm {
       transform-origin: 112.5px;
-      animation: arm-move 2s linear forwards infinite;
+      animation: arm-move 4s linear forwards infinite;
   }
 
   @keyframes arm-move {
@@ -185,4 +185,8 @@ button{
     100% {
         opacity: 0.5;
     }
+  }
+
+  svg{
+    max-width: 100%;
   }

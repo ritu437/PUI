@@ -18,10 +18,16 @@ $(document).ready(function(){
     );
 
     /*Neutral img changes to appropriate img based on Yes or No button click*/
-    $(".act button").click(
+    $(".act1 button").click( //activity 1
         function(){
             var newSrc = $(this).attr("newSrc"); //get src of new img
-            $(".act img").attr("src", newSrc); //set src to new src
+            $(".act1 img").attr("src", newSrc); //set src to new src
+        }
+    );
+    $(".act2 button").click( //activity 2
+        function(){
+            var newSrc = $(this).attr("newSrc"); //get src of new img
+            $(".act2 img").attr("src", newSrc); //set src to new src
         }
     );
 
