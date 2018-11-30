@@ -15,8 +15,8 @@ body > .container-fluid {
 @media (min-width: 1000px){
   #home-icon{
     width: 4vw;
+  }
 }
-
 
 }
 #header-consent{
