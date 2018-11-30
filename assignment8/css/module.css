@@ -201,6 +201,16 @@ button{
   .activity img{
     max-height: 30vw;
   }
+  @media(max-width: 800px){
+    .activity img{
+      max-height: 40vw;
+    }
+  }
+  @media(max-width: 500px){
+    .activity img{
+      max-height: 70vw;
+    }
+  }
   #ylw-str {
     transform-origin: 95px;
     animation: str-rotate 20s linear forwards infinite;
@@ -236,6 +246,9 @@ button{
 
   svg{
     max-width: 100%;
+  }
+  .end svg{
+    margin-top: 100px;
   }
 
   @media (min-width: 1200px){
