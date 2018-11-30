@@ -8,8 +8,16 @@ body > .container-fluid {
     background-color: #F9A603;
 }
 #home-icon{
-    width: 3vw;
+    width: 50px;
     color: #009bff;
+}
+
+@media (min-width: 1000px){
+  #home-icon{
+    width: 4vw;
+}
+
+
 }
 #header-consent{
     font-family: 'Cabin Sketch', cursive;
