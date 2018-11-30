@@ -88,6 +88,12 @@ p{
     margin-bottom: 30px;
 }
 
+@media (max-width: 500px){
+    p{
+      font-size: 32px;
+    }
+}
+
 button{
     width:100%;
     justify-content: center;
@@ -109,14 +115,13 @@ button{
     stroke-width: 1;
     stroke-dasharray: 690;
     stroke-dashoffset: 700;
-    animation: dash 10s linear forwards infinite;
+    animation: dash 7s linear forwards infinite;
 }
   @keyframes dash {
     to {
       stroke-dashoffset: 0;
     }
   }
-
 
   .danger-symbol {
       animation: appear-disappear 2s linear forwards infinite;
@@ -152,7 +157,7 @@ button{
   }
 
   .consent svg{
-    margin-top: 30px;
+    margin-top: 100px;
     margin-bottom: 15px;
   }
 
@@ -185,6 +190,9 @@ button{
     }
   }
 
+  .activity img{
+    max-height: 30vw;
+  }
   #ylw-str {
     transform-origin: 95px;
     animation: str-rotate 20s linear forwards infinite;
@@ -221,3 +229,11 @@ button{
   svg{
     max-width: 100%;
   }
+
+  @media (min-width: 1200px){
+    .size-lg{
+      max-height: 30vw;
+      width: auto;
+      margin-top: 15px;
+    }
+  }  /*for sizing permission = consent & end star svg*/
