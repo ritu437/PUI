@@ -1,0 +1,95 @@
+body{
+    background-color: #F7EFE2;
+}
+.sub-header{
+    background-color: #F9A603;
+}
+#home-icon{
+    width: 40px;
+    color: #009bff;
+}
+
+@media (min-width: 1000px){
+  #home-icon{
+    width: 4vw;
+  }
+}
+#header-consent{
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 10vw;
+    color: #B3C100;
+}
+#header-for{
+    margin-left:7px;
+    margin-right: 10px;
+    font-family: 'Marck Script', cursive;
+    font-size: 4vw;
+    color: #000;
+}
+#header-kids{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 7vw;
+    justify-content: center;
+    color: #F25C00;
+}
+@media (min-width: 1200px){
+    #header-consent{
+        font-size: 120px;
+    }
+    #header-kids{
+        font-size: 120px;
+    }
+}
+.info-links{
+    color: #009bff;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.info-links a{
+    color: #000;
+}
+
+@media (max-width: 415px){ /*small screen*/
+    .info-links{
+        font-size: 22px;
+    }
+}
+
+.main-bod{
+    justify-content: center;
+    text-align: center;
+    margin:auto;
+    margin-top: 30px;
+}
+
+.main-bod img{
+    width: 20vw;
+    height: auto;
+}
+
+@media (max-width: 1400px){ /*larger mobile devices*/
+    .main-bod img{
+        width: auto;
+        height: 35vw;
+    }
+}
+
+@media (max-width: 1000px){ /* mobile devices*/
+    .main-bod img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+h1{
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+}
+
+p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+}
