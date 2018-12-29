@@ -1,38 +1,36 @@
-
+/*BODY BACKGROUND*/
 body{
     background-color: #F7EFE2;
 }
 body > .container-fluid {
     overflow-x: hidden;
 }
-.sub-header{
-    background-color: #F9A603;
-}
+
+/*HEADER*/
 #home-icon{
     width: 40px;
     color: #009bff;
 }
-
 @media (min-width: 1000px){
   #home-icon{
     width: 4vw;
   }
 }
 #header-consent{
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Nothing You Could Do', cursive;
     font-size: 10vw;
     color: #B3C100;
 }
 #header-for{
-    margin-left:7px;
-    margin-right: 10px;
-    font-family: 'Marck Script', cursive;
-    font-size: 4vw;
-    color: #000;
+    margin-left:1vw;
+    margin-right: 1vw;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 3vw;
+    color: #009BFF;
 }
 #header-kids{
     font-family: 'Nothing You Could Do', cursive;
-    font-size: 7vw;
+    font-size: 10vw;
     justify-content: center;
     color: #F25C00;
 }
@@ -44,39 +42,49 @@ body > .container-fluid {
         font-size: 120px;
     }
 }
-.info-links{
-    color: #009bff;
-    font-family: 'Amatic SC', cursive;
-    font-weight: bold;
-    font-size: 34px;
-}
 
+/*NAVIGATION*/
+.sub-header{
+    padding: 5px;
+    background-color: #F9A603;
+}
+.info-links{
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    font-size: 38px;
+}
 .info-links a{
     color: #000;
 }
-
+p{
+    color: #000100;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 34px;
+    vertical-align: text-bottom;
+    margin: 10px;
+    margin-top: 6px;
+}
 @media (max-width: 360px){
     .sub-header{
         /*display: none;*/
     }
 }
 
+/*BODY CONTENT*/
 .main-body{
     margin-top: 50px;
 }
-
 .module-img{
     width: 100%;
     height: 300px;
     overflow: hidden;
     text-align: center;
 }
-
 .module-img img{
     height: 100%;
     width: 100%;
 }
-
 .module-title{
     text-align: center;
     color: #000 ;
@@ -85,6 +93,3 @@ body > .container-fluid {
     font-size: 50px;
     margin-top: 7px;
 }
-
-
-/*#009bff*/
