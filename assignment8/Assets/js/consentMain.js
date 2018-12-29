@@ -17,6 +17,18 @@ $(document).ready(function(){
         }
     );
 
+    /*nav link text on home page gets larger on hover*/
+    $(".nav-link").hover(
+        /*When hover over a link change font size*/
+        function(){
+            $(this).css("border-bottom", "2px solid #000"); //increase font size
+        },
+        /*When hover off link text goes back to original size*/
+        function(){
+            $(this).css("border-bottom", "none"); //decrease font size
+        }
+    );
+
     /*Neutral img changes to appropriate img based on Yes or No button click*/
     $(".act1 button").click( //activity 1
         function(){

@@ -45,8 +45,9 @@ body > .container-fluid {
 
 /*NAVIGATION*/
 .sub-header{
-    padding: 5px;
+    padding-top: 5px;
     background-color: #F9A603;
+    height: 85px;
 }
 .info-links{
     font-family: 'Amatic SC', cursive;
@@ -56,7 +57,7 @@ body > .container-fluid {
 .info-links a{
     color: #000;
 }
-p{
+p{ /*the bars*/
     color: #000100;
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
@@ -92,4 +93,7 @@ p{
     font-weight: bold;
     font-size: 50px;
     margin-top: 7px;
+}
+.module-link h3{
+    text-decoration: none;
 }
